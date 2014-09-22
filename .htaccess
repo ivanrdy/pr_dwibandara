@@ -8,4 +8,7 @@ RewriteRule ^kontak$ main.php?page=kontak [L]
 RewriteRule ^lokasi$ main.php?page=lokasi [L]
 RewriteRule ^in$ main.php?page=login
 
+RewriteRule ^mint-edit-deskripsi$ mint.php?page=editdeskripsi [L]
+RewriteRule ^mint-edit-lokasi$ mint.php?page=editlokasi [L]
+
 Options All -Indexes
