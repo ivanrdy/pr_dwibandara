@@ -1,0 +1,11 @@
+ErrorDocument 404 /error.html
+
+RewriteEngine On
+
+RewriteRule ^beranda$ main.php?page=home [L]
+RewriteRule ^pakej$ main.php?page=pakej [L]
+RewriteRule ^kontak$ main.php?page=kontak [L]
+RewriteRule ^lokasi$ main.php?page=lokasi [L]
+RewriteRule ^in$ main.php?page=login
+
+Options All -Indexes
