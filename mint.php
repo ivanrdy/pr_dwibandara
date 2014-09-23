@@ -3,6 +3,7 @@
 <?php    
     //Include
     include("lib/conn.php");
+    include("lib/paginator.php");
     include("views/a_head.php");    
     session_start();
 ?>
@@ -16,6 +17,8 @@
         							            break;
         		case 'editlokasi'	         :	include("views/a_edit_lokasi.php");
         			       			            break;
+                case 'lokasi'                : include ("views/a_lokasi.php");
+                                                break;
 
         	}	
 

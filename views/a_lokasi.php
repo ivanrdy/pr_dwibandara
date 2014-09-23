@@ -17,13 +17,6 @@
                     <div class="row">
                     <div class="col-sm-12">
                     <div class='col-md-4'>
-                    <?php
-
-                    $id = $_GET['id'];
-                    $q = mysql_query("SELECT * FROM lokasi WHERE id = $id");
-                    $fetch = mysql_fetch_array($q);
-
-                    ?>
                         <div class="box box-pinky">
                             <div class="box-header">
                                 <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Lokasi Wisata</h3>
@@ -31,16 +24,15 @@
                                     <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="ubahLokasi" enctype="multipart/form-data" method="post">
+                            <form role="form" action="tambahLokasi" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Nama Lokasi</label>
-                                    <input type='hidden' name='id' value='<?php echo $id; ?>'>
-                                    <input value="<?php echo $fetch['nama']; ?>" type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Lokasi">
+                                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Lokasi Wisata">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Deskripsi</label>
-                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi Lokasi Wisata"><?php echo $fetch['deskripsi']; ?></textarea>
+                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi Lokasi Wisata"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>
@@ -71,8 +63,9 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th>Nama Lokasi</th>
-                                            <th>Status</th>                                           
+                                            <th>Nama Lokasi</th>                                       
+                                            
+                                            <th>Status</th>
                                             <th colspan=3>Tindakan</th>
                                         </tr>
                                         </thead>
@@ -102,7 +95,7 @@
                                             </tr>";
                                             }
                                             $jmldata    =   mysql_num_rows(mysql_query("SELECT * FROM lokasi"));
-                                            $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
+                                               $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
                                             $linkHalaman=   $p->navHalaman($_GET['hal'],$jmlhalaman);                              
                                              
                                             }
@@ -115,6 +108,7 @@
                             // displaying paginaiton.
                                 echo "<ul class='pagination pagination-sm no-margin pull-right'>$linkHalaman</ul>";
                             ?>
+                            </div><!-- /.box-footer-->
                         </div><!-- /.box -->
                     </div><!-- /.col -->
                 </section><!-- /.content -->

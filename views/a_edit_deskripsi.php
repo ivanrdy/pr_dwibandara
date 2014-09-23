@@ -26,58 +26,53 @@
                             <form method='post' role='form' action='ubahInfo'>
                                 <div class="box-body">
                                 <table class='table'>
-                               
+                                <?php
+
+                                $q = mysql_fetch_array(mysql_query("SELECT * FROM kontak"));
+
+                                ?>
                                     <tr>
                                         <td>
                                             <div class="form-group">
                                                 <label for="telepon"><i class='fa fa-phone'></i> Telepon 1</label>
-                                                <input type="text" name="telepon1" class="form-control" id="telepon1" placeholder="Telepon" value=''>
+                                                <input type="text" name="telepon1" class="form-control" id="telepon1" placeholder="Telepon" value='<?php echo $q['telpon_1']; ?>'>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-group">
-                                                <label for="bb"><i class='fa fa-phone'></i> Telepon 2 (Jika ada)</label>
-                                                <input type="text" name="telepon1" class="form-control" id="telepon2" placeholder="Telepon 2" value=''>
+                                                <label for="telepon2"><i class='fa fa-phone'></i> Telepon 2 (Jika ada)</label>
+                                                <input type="text" name="telepon2" class="form-control" id="telepon2" placeholder="Telepon 2" value='<?php echo $q['telpon_2']; ?>'>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-group">
-                                                <label for="wa"><i class='fa fa-envelope'></i> E-mail</label>
-                                                <input type="text" name="whatsapp" class="form-control" id="wa" placeholder="Nomor WhatsApp" value=''>
+                                                <label for="email"><i class='fa fa-envelope'></i> E-mail</label>
+                                                <input type="text" name="email" class="form-control" id="wa" placeholder="E-mail" value='<?php echo $q['email']; ?>'>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <div class="form-group">
-                                                <label for="blog"><i class='fa fa-globe'></i> Blog</label>
-                                                <input type="text" name="blog" class="form-control" id="blog" placeholder="Alamat Blog" value=''>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="form-group">
-                                                <label for="fb"><i class='fa fa-facebook-square'></i> FB</label>
-                                                <input type="text" name="facebook" class="form-control" id="fb" placeholder="Alamat FB" value=''>
-                                            </div>
-                                        </td>
                                       
-                                    </tr>
                                 </table>
                                 <div class="form-group">
                                     <label for="alamat"><i class='fa fa-home'></i> Alamat</label>
-                                    <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"></textarea>
+                                    <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"><?php echo $q['alamat']; ?></textarea>
                                  </div>
+                                 <?php 
+                                 $q = mysql_fetch_array(mysql_query("SELECT * FROM deskripsi"));
+                                 ?>
+                                 
                                   <div class="form-group">
-                                    <label for="alamat"><i class='fa fa-check'></i> Deskripsi Layanan DwiBandara</label>
-                                    <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"></textarea>
+                                    <label for="deskripsi"><i class='fa fa-check'></i> Deskripsi DwiBandara</label>
+                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi DwiBandara"><?php echo $q['layanan']; ?></textarea>
                                  </div>
                                       <div class="form-group">
-                                    <label for="alamat"><i class='fa fa-plus'></i> Keunggulan DwiBandara</label>
-                                    <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"></textarea>
+                                    <label for="keunggulan"><i class='fa fa-plus'></i> Keunggulan DwiBandara</label>
+                                    <textarea name='keunggulan' class='form-control full-width' placeholder="Keunggulan DwiBandara"><?php echo $q['keunggulan']; ?></textarea>
                                  </div>
                                       <div class="form-group">
-                                    <label for="alamat"><i class='fa fa-about'></i> Tentang DwiBandara</label>
-                                    <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"></textarea>
+                                    <label for="layanan"><i class='fa fa-about'></i> Layanan DwiBandara</label>
+                                    <textarea name='layanan' class='form-control full-width' placeholder="Layanan DwiBandara"><?php echo $q['tentang_kami']; ?></textarea>
                                  </div>
 
                                 </div><!-- /.box-body -->
