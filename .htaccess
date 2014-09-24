@@ -6,12 +6,13 @@ RewriteRule ^beranda$ main.php?page=home [L]
 RewriteRule ^pakej$ main.php?page=pakej [L]
 RewriteRule ^kontak$ main.php?page=kontak [L]
 RewriteRule ^lokasi$ main.php?page=lokasi [L]
-RewriteRule ^in$ main.php?page=login
+RewriteRule ^in$ main.php?page=login [L]
 
 RewriteRule ^mint-edit-deskripsi$ mint.php?page=editdeskripsi [L]
 RewriteRule ^mint-lokasi-(.*)$ mint.php?page=lokasi&hal=$1 [L]
 RewriteRule ^mint-edit-lokasi-(.*)$ mint.php?page=editlokasi&id=$1 [L]
 RewriteRule ^mint-user$ mint.php?page=user [L]
+RewriteRule ^mint-edit-user-(.*)$ mint.php?page=edituser&id=$1 [L]
 
 
 RewriteRule ^hapuslokasi-(.*)$ controller/adminController.php?process=deleteLokasi&id=$1 [L]
