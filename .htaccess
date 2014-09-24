@@ -17,6 +17,7 @@ RewriteRule ^mint-edit-user-(.*)$ mint.php?page=edituser&id=$1 [L]
 RewriteRule ^hapuslokasi-(.*)$ controller/adminController.php?process=deleteLokasi&id=$1 [L]
 RewriteRule ^tambahLokasi$ controller/adminController.php?process=tambahLokasi [L]
 RewriteRule ^ubahstatuslokasi-(.*)$ controller/adminController.php?process=changeStat&id=$1 [L]
+RewriteRule ^editUser$ controller/adminController.php?process=editUser [L]
 
 
 Options All -Indexes
