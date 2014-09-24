@@ -33,7 +33,7 @@
                                     <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="tambahLokasi" enctype="multipart/form-data" method="post">
+                            <form role="form" action="editUser" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Username</label>

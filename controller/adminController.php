@@ -163,6 +163,25 @@
 
                         break;
            
+                  case "editUser":
+                  $id        = $_POST['id'];
+                  $username  = $_POST['username'];
+                  $password  = $_POST['password'];
 
+                      $query = mysql_query("UPDATE user SET username='$user', password='$password' WHERE id=$id");
+
+                      if($query){ 
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('user berhasil diperbarui.')
+                                
+                                </SCRIPT>");
+                      }else{
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('Kontak gagal diperbarui.')
+                              
+                                </SCRIPT>");
+                      } 
+                      
+                      break;
       }
 ?>
