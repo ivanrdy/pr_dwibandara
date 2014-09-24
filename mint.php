@@ -19,6 +19,8 @@
         			       			            break;
                 case 'lokasi'                : include ("views/a_lokasi.php");
                                                 break;
+                case 'user'                  : include ("views/a_user.php");
+                                                break;
 
         	}	
 

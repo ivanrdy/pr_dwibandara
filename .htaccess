@@ -11,6 +11,7 @@ RewriteRule ^in$ main.php?page=login
 RewriteRule ^mint-edit-deskripsi$ mint.php?page=editdeskripsi [L]
 RewriteRule ^mint-lokasi-(.*)$ mint.php?page=lokasi&hal=$1 [L]
 RewriteRule ^mint-edit-lokasi-(.*)$ mint.php?page=editlokasi&id=$1 [L]
+RewriteRule ^mint-user$ mint.php?page=user [L]
 
 
 RewriteRule ^hapuslokasi-(.*)$ controller/adminController.php?process=deleteLokasi&id=$1 [L]
