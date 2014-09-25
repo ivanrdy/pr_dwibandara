@@ -22,6 +22,8 @@ RewriteRule ^tambahUser$ controller/adminController.php?process=tambahUser [L]
 RewriteRule ^editUser$ controller/adminController.php?process=editUser [L]
 RewriteRule ^ubahstatususer-(.*)$ controller/adminController.php?process=changeStatUser&id=$1 [L]
 RewriteRule ^hapususer-(.*)$ controller/adminController.php?process=deleteUser&id=$1 [L]
+RewriteRule ^ubahkontak$ controller/adminController.php?process=ubahKontak [L]
+RewriteRule ^ubahdeskripsi$ controller/adminController.php?process=ubahDeskripsi [L]
 
 
 Options All -Indexes

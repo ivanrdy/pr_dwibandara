@@ -254,5 +254,53 @@
                         break;
 
 
+                  case "ubahKontak":
+
+                        $alamat   = $_POST['alamat'];
+                        $email    = $_POST['email'];
+                        $blog     = $_POST['blog'];
+                        $telpon_1  = $_POST['telepon_1'];                        
+                        $telpon_2  = $_POST['telepon_2'];
+
+                        $query = mysql_query("UPDATE kontak SET alamat='$alamat',email='$email',blog='$blog',telpon_1='$telpon_1',telpon_2='$telpon_2'");
+
+                        if($query){ 
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                  window.alert('Kontak berhasil diperbarui.')
+                                  window.location.href='mint-edit-deskripsi'
+                                  </SCRIPT>");
+                        }else{
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                  window.alert('Kontak gagal diperbarui.')
+                                  window.location.href='mint-edit-deskripsi'
+                                  </SCRIPT>");
+                        } 
+                        
+                        break;
+
+                  case"ubahDeskripsi":
+
+                      $layanan = $_POST['layanan'];
+                      $keunggulan = $_POST['keunggulan'];
+                      $tentang_kami = $_POST['tentang_kami'];
+
+
+                      $query = mysql_query("UPDATE deskripsi SET layanan='$layanan',keunggulan='$keunggulan',tentang_kami='$tentang_kami'");
+
+                        if($query){ 
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                  window.alert('Deskripsi DwiBandara berhasil diperbarui.')
+                                  window.location.href='mint-edit-deskripsi'
+                                  </SCRIPT>");
+                        }else{
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                  window.alert('Deskripsi DwiBandara gagal diperbarui.')
+                                  window.location.href='mint-edit-deskripsi'
+                                  </SCRIPT>");
+                        } 
+
+
+
+
       }
 ?>

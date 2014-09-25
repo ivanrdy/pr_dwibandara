@@ -23,7 +23,7 @@
                                         <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form method='post' role='form' action='ubahInfo'>
+                             <form role="form" action="ubahkontak" method="post">
                                 <div class="box-body">
                                 <table class='table'>
                                 <?php
@@ -35,13 +35,13 @@
                                         <td>
                                             <div class="form-group">
                                                 <label for="telepon"><i class='fa fa-phone'></i> Telepon 1</label>
-                                                <input type="text" name="telepon1" class="form-control" id="telepon1" placeholder="Telepon" value='<?php echo $q['telpon_1']; ?>'>
+                                                <input type="text" name="telepon_1" class="form-control" id="telepon1" placeholder="Telepon" value='<?php echo $q['telpon_1']; ?>'>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-group">
                                                 <label for="telepon2"><i class='fa fa-phone'></i> Telepon 2 (Jika ada)</label>
-                                                <input type="text" name="telepon2" class="form-control" id="telepon2" placeholder="Telepon 2" value='<?php echo $q['telpon_2']; ?>'>
+                                                <input type="text" name="telepon_2" class="form-control" id="telepon2" placeholder="Telepon 2" value='<?php echo $q['telpon_2']; ?>'>
                                             </div>
                                         </td>
                                         <td>
@@ -49,38 +49,59 @@
                                                 <label for="email"><i class='fa fa-envelope'></i> E-mail</label>
                                                 <input type="text" name="email" class="form-control" id="wa" placeholder="E-mail" value='<?php echo $q['email']; ?>'>
                                             </div>
+                                             
+                                        </td>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="blog"><i class='fa fa-envelope'></i> Blog</label>
+                                                <input type="text" name="blog" class="form-control" id="wa" placeholder="Blog" value='<?php echo $q['blog']; ?>'>
+                                            </div>
+                                             
                                         </td>
                                     </tr>
                                     <tr>
                                       
                                 </table>
+                             
+
                                 <div class="form-group">
                                     <label for="alamat"><i class='fa fa-home'></i> Alamat</label>
                                     <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"><?php echo $q['alamat']; ?></textarea>
+                                    <div class="box-footer">
+                                                <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>     
+                                                   </tr>
+                                     </table>
+                                    </form>                                          
+                                             </div>
                                  </div>
+                                    
+                                     
                                  <?php 
                                  $q = mysql_fetch_array(mysql_query("SELECT * FROM deskripsi"));
                                  ?>
-                                 
+                                <form role="form" action="ubahdeskripsi" enctype="multipart/form-data" method="post">
+                                <div class="box-body">
+                                <table class='table'>
                                   <div class="form-group">
-                                    <label for="deskripsi"><i class='fa fa-check'></i> Deskripsi DwiBandara</label>
-                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi DwiBandara"><?php echo $q['layanan']; ?></textarea>
+                                    <label for="deskripsi"><i class='fa fa-check'></i> Layanan DwiBandara</label>
+                                    <textarea name='layanan' class='form-control full-width' placeholder="Deskripsi DwiBandara"><?php echo $q['layanan']; ?></textarea>
                                  </div>
                                       <div class="form-group">
                                     <label for="keunggulan"><i class='fa fa-plus'></i> Keunggulan DwiBandara</label>
                                     <textarea name='keunggulan' class='form-control full-width' placeholder="Keunggulan DwiBandara"><?php echo $q['keunggulan']; ?></textarea>
                                  </div>
                                       <div class="form-group">
-                                    <label for="layanan"><i class='fa fa-about'></i> Layanan DwiBandara</label>
-                                    <textarea name='layanan' class='form-control full-width' placeholder="Layanan DwiBandara"><?php echo $q['tentang_kami']; ?></textarea>
+                                    <label for="layanan"><i class='fa fa-wrench'></i> Tentang DwiBandara</label>
+                                    <textarea name='tentang_kami' class='form-control full-width' placeholder="Layanan DwiBandara"><?php echo $q['tentang_kami']; ?></textarea>
                                  </div>
 
                                 </div><!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>
-                                <input type="reset" class="btn btn-default" value="Ulangi">
+                                <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>                     
                             </div>
                             </form>
+                            </table>
+                            </div>
                         </div><!-- /.box -->
                     </div>
                 </section><!-- /.content -->
