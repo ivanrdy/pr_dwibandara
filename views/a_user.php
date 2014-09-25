@@ -24,17 +24,22 @@
                                     <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="tambahLokasi" enctype="multipart/form-data" method="post">
+                            <form role="form" action="tambahUser" enctype="multipart/form-data" method="post">
+                           
+                             
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Username</label>
-                                    <input type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" placeholder="Username">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
                                     <input type="password" name="password" class="form-control" id="exampleInputEmail1" placeholder="Password">                                   
                                 </div>
-                             
+                              <div class="form-group">
+                                    <label for="nama">Nama</label>
+                                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Nama">
+                                </div>
                             </div><!-- /.box-body -->
                             <div class="box-footer">
                                 <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>
@@ -82,11 +87,11 @@
                                                 <td>$b[name]</td>                                                 
                                                 <td>$b[status]</td>                                              
                                                 <td><a href='mint-edit-user-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
-                                                <td><a href='hapuslokasi-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
+                                                <td><a href='hapususer-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
                                                 if($b['status']=='Aktif'){
-                                                    echo"<td><a href='ubahstatuslokasi-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatususer-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
                                                 }else{
-                                                    echo"<td><a href='ubahstatuslokasi-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatususer-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
                                                 }
                                                 echo"
                                             </tr>";

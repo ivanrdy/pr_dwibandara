@@ -18,7 +18,10 @@ RewriteRule ^ubahLokasi-(.*)$ controller/adminController.php?process=ubahLokasi&
 RewriteRule ^hapuslokasi-(.*)$ controller/adminController.php?process=deleteLokasi&id=$1 [L]
 RewriteRule ^tambahLokasi$ controller/adminController.php?process=tambahLokasi [L]
 RewriteRule ^ubahstatuslokasi-(.*)$ controller/adminController.php?process=changeStat&id=$1 [L]
+RewriteRule ^tambahUser$ controller/adminController.php?process=tambahUser [L]
 RewriteRule ^editUser$ controller/adminController.php?process=editUser [L]
+RewriteRule ^ubahstatususer-(.*)$ controller/adminController.php?process=changeStatUser&id=$1 [L]
+RewriteRule ^hapususer-(.*)$ controller/adminController.php?process=deleteUser&id=$1 [L]
 
 
 Options All -Indexes

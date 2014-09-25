@@ -23,6 +23,8 @@
                                                 break;
                 case 'edituser'              : include ("views/a_edit_user.php");
                                                 break;
+                case 'tambahUser'            : include ("views/a_user.php");
+                                                break;
 
         	}	
 

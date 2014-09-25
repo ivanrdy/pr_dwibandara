@@ -51,7 +51,7 @@
 			if($query){	
 				echo ("<SCRIPT LANGUAGE='JavaScript'>
 				        window.alert('Lokasi $nama berhasil ditambahkan.')
-				        window.location.href='mint-lokasi'
+				        window.location.href='mint-lokasi-1'
 				        </SCRIPT>");
 			}else{
 				echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -69,10 +69,11 @@
                   $nama       =     $_POST['nama'];
                   $deskripsi  =     $_POST['deskripsi'];                  
                   $gambar     =     $_FILES['gambar']['name'];
+
                                       
             if(empty($gambar)){
 
-                  $query = mysql_query("UPDATE lokasi SET nama='$nama', deskripsi='$detail' WHERE id=$id");
+                  $query = mysql_query("UPDATE lokasi SET nama='$nama', deskripsi='$deskripsi' WHERE id=$id");
                                       
             }else{
 
@@ -112,7 +113,7 @@
                   if($query){ 
                         echo ("<SCRIPT LANGUAGE='JavaScript'>
                                 window.alert('Lokasi $nama berhasil diperbarui.')
-                                window.location.href='mint-edit-lokasi'
+                                window.location.href='mint-edit-lokasi-1'
                                 </SCRIPT>");
                   }else{
                         echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -162,26 +163,96 @@
 
 
                         break;
+
+                  case"tambahUser":
+
+                  $username  = $_POST['username'];
+                  $password  = $_POST['password'];
+                  $nama      = $_POST['name'];
+                  $status    = "Aktif";
+
+                      $query = mysql_query("INSERT INTO user(username,password,name,status)
+                        VALUES('$username','$password','$nama','$status')"); 
+
+                      echo"$query";
+                     if($query){ 
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('user berhasil ditambahkan.')
+                                window.location.href='mint-user'
+                                </SCRIPT>");
+                      }else{
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('User gagal ditambahkan.')
+                                window.location.href='$_SERVER[HTTP_REFERER]'                               
+                                </SCRIPT>");
+                      }
+                      
+
+
+                    break;
+
+
            
                   case "editUser":
                   $id        = $_POST['id'];
                   $username  = $_POST['username'];
                   $password  = $_POST['password'];
 
-                      $query = mysql_query("UPDATE user SET username='$user', password='$password' WHERE id=$id");
+                      $query = mysql_query("UPDATE user SET username='$username', password='$password' WHERE id=$id");
 
                       if($query){ 
                         echo ("<SCRIPT LANGUAGE='JavaScript'>
                                 window.alert('user berhasil diperbarui.')
-                                
+                                window.location.href='mint-edit-user-1'
                                 </SCRIPT>");
                       }else{
                         echo ("<SCRIPT LANGUAGE='JavaScript'>
                                 window.alert('Kontak gagal diperbarui.')
-                              
+                                window.location.href='$_SERVER[HTTP_REFERER]'
                                 </SCRIPT>");
                       } 
                       
                       break;
+
+
+                   case "changeStatUser":
+
+                        $id = $_GET['id'];
+                        echo $id;
+
+                        $q = mysql_fetch_array(mysql_query("SELECT * FROM user WHERE id=$id")); 
+                        if($q['status'] == "Aktif"){
+                              mysql_query("UPDATE user SET status='Tidak Aktif' WHERE id=$id");
+                              echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                      window.alert('User telah dinonaktifkan.')
+                                      window.location.href='$_SERVER[HTTP_REFERER]'
+                                      </SCRIPT>");
+                        }else{
+                              mysql_query("UPDATE user SET status='Aktif' WHERE id=$id");
+                              echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                      window.alert('User telah diaktifkan.')
+                                      window.location.href='$_SERVER[HTTP_REFERER]'
+                                      </SCRIPT>");
+                        }
+
+
+                        break;
+
+
+                   case "deleteUser":
+
+                        $id = $_GET['id'];
+
+                        $del = mysql_fetch_array(mysql_query("SELECT * FROM user WHERE id=$id"));
+                       
+                        mysql_query("DELETE FROM user WHERE id=$id");
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('User dihapus.')
+                                window.location.href='$_SERVER[HTTP_REFERER]'
+                                </SCRIPT>");
+
+                        break;
+
+
       }
 ?>

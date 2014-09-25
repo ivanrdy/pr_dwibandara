@@ -92,12 +92,12 @@
                                                 <td>$b[username]</td>
                                                 <td>$b[name]</td>                                                 
                                                 <td>$b[status]</td>                                              
-                                                <td><a href='mint-edit-lokasi-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
-                                                <td><a href='hapuslokasi-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
+                                                <td><a href='mint-edit-user-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
+                                                <td><a href='hapususer-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
                                                 if($b['status']=='Aktif'){
-                                                    echo"<td><a href='ubahstatuslokasi-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatususer-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
                                                 }else{
-                                                    echo"<td><a href='ubahstatuslokasi-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatususer-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
                                                 }
                                                 echo"
                                             </tr>";

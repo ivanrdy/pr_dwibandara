@@ -26,12 +26,12 @@
                     ?>
                         <div class="box box-pinky">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Lokasi Wisata</h3>
+                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Ubah Lokasi Wisata</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="ubahLokasi" enctype="multipart/form-data" method="post">
+                            <form role="form" action="ubahLokasi-$id" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Nama Lokasi</label>
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>
-                                    <input type="file" id="gambar" name="gambar" accept='image/*' required>
+                                    <input type="file" id="gambar" name="gambar" accept='image/*'>
                                     <p class="help-block">Masukkan file gambar.</p>
                                 </div>
                             </div><!-- /.box-body -->
