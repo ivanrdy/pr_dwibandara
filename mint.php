@@ -20,10 +20,10 @@
                 case 'lokasi'                : include ("views/a_lokasi.php");
                                                 break;
                 case 'user'                  : include ("views/a_user.php");
-                                                break;
+                                               break;
                 case 'edituser'              : include ("views/a_edit_user.php");
-                                                break;
-                case 'tambahUser'            : include ("views/a_user.php");
+                                                break;             
+                case 'galeri'                : include ("views/a_galeri.php");
                                                 break;
 
         	}	

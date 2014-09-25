@@ -299,6 +299,76 @@
                                   </SCRIPT>");
                         } 
 
+                        break;
+
+
+                        case "tambahGaleri":
+                        
+
+                        $nama_foto  = $_POST['nama_foto'];
+                        $deskripsi  = $_POST['deskripsi'];
+                        $tanggal        = date('Y-m-d H:i:s');
+                        $status     = 'Aktif';
+                        $foto       =   $_FILES['foto']['name'];
+                       
+                                                        
+                              if(empty($gambar)){
+
+                                $query = mysql_query("INSERT INTO galeri(id,nama_foto,deskripsi,foto,tanggal,status)
+                          VALUES('','$nama_foto','$deskripsi','$tanggal','$status')");
+                                                        
+                              }else{
+
+                                $errors     = array();
+                                $maxsize    = 2097152;
+                                $acceptable = array(
+                                    'image/jpeg',
+                                    'image/jpg',
+                                    'image/gif',
+                                    'image/png'
+                                );
+
+                                if(($_FILES['gambar']['size'] >= $maxsize) || ($_FILES["gambar"]["size"] == 0)) {
+                                    $errors[] = 'Ukuran gambar terlalu besar, gambar tidak boleh lebih dari 2MB.';
+                                }
+
+                                if(!in_array($_FILES['gambar']['type'], $acceptable) && (!empty($_FILES["gambar"]["type"]))) {
+                                    $errors[] = 'Jenis file tidak diperbolehkan, hanya bisa upload gambar berekstensi jpg/png/gif.';
+                                }
+
+                                if(count($errors) === 0) {
+                                    $lokasi_file = $_FILES['gambar']['tmp_name'];
+                                    $dir = "../assets/img/lokasi/";
+                                    $ukuran = $_FILES['gambar']['size'];
+                                    move_uploaded_file($lokasi_file,$dir.$gambar);
+                                     $query = mysql_query("INSERT INTO galeri(id,nama_foto,deskripsi,foto,tanggal,status)
+                          VALUES('','$nama_foto','$deskripsi','$tanggal','$status')"); 
+                                } else {
+                                    foreach($errors as $error) {
+                                        echo '<script>alert("'.$error.'");</script>';
+                                        $query = mysql_query("DELETE FROM galeri WHERE id=none");
+                                    }
+                                }             
+
+                                }
+                                
+                                if($query){ 
+                                  echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                          window.alert('Galeri $nama_foto berhasil ditambahkan.')
+                                          window.location.href='mint-galeri-1'
+                                          </SCRIPT>");
+                                }else{
+                                  echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                          window.alert('Terjadi kesalahan pada penambahan galeri, silakan ulangi.')
+                                          window.location.href='$_SERVER[HTTP_REFERER]'
+                                          </SCRIPT>");
+                                }
+
+                        
+                         break;
+
+ 
+
 
 
 
