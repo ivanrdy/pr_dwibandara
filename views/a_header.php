@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="index.html" class="logo">
+    <a href="beranda" class="logo">
         <!-- Add the class icon to your logo image or logo icon to add the margining -->
         Dwibandara Travel
     </a>
@@ -49,7 +49,7 @@
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-right">
-                                <a href="logout" class="btn btn-default btn-flat">Keluar</a>
+                                <a href="doLogout" class="btn btn-default btn-flat">Keluar</a>
                             </div>
                         </li>
                     </ul>
@@ -69,21 +69,11 @@
                     <img src="assets/img/avatar5.png" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
-                    <p>Hello, admin</p>
+                    <p>Hello, <?php echo $_SESSION['name']; ?></p>
 
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
-            <!-- search form -->
-            <form action="#" method="get" class="sidebar-form">
-                <div class="input-group">
-                    <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                    <span class="input-group-btn">
-                        <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                    </span>
-                </div>
-            </form>
-            <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="active">

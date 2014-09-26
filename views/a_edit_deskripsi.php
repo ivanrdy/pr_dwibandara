@@ -3,12 +3,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Edit Deskripsi
+                        <small>Panel administrator</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="mint"><i class="fa fa-dashboard"></i> Home</a></li>
+                        <li class="active">Edit Deskripsi</li>
                     </ol>
                 </section>
 

@@ -1,10 +1,10 @@
 <head>
-	<title>DwiBandara Tours & Travel</title>
+	<title>DWIbandara | Pakej Bandung Murah Sangat</title>
 	<meta name="author" content="DwiBandara Tours & Travel, Bandung, Indonesia">
-	<meta name="description" content="Pakej Indonesia Bandung Murah Sangat, Paket Bandung Indonesia Sangat Murah">
+	<meta name="description" content="Pakej Bandung Murah Sangat, Pakej Wisata Bandung Indonesia Murah Sangat">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="icon" href="assets/img/icon.png">
+	<link rel="icon" href="assets/img/icon 2.png">
 	<link rel="stylesheet" href="assets/css/lumen.bootstrap.css">
 	<link rel="stylesheet" href="assets/css/modern-business.css">
 	<link rel="stylesheet" href="assets/css/font-awesome.css">

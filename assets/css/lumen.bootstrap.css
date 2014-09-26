@@ -12,6 +12,11 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+@font-face{
+  font-family: "Lobster";
+  src: url(../fonts/Lobster_1.3.otf);
+}
+.lobster  { font-family: "Lobster";}
 body {
   margin: 0;
 }
@@ -3879,6 +3884,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
+  color: yellow;
+}
+
+a.navbar-brand:hover {
+  color: yellow;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out
 }
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
@@ -4188,7 +4200,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #333333;
+  /*color: #333333;*/
   background-color: transparent;
 }
 .navbar-inverse .navbar-text {

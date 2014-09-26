@@ -1,4 +1,4 @@
-ErrorDocument 404 /error.html
+ErrorDocument 404 /project/pr_dwibandara/error.html
 
 RewriteEngine On
 
@@ -6,8 +6,11 @@ RewriteRule ^beranda$ main.php?page=home [L]
 RewriteRule ^pakej$ main.php?page=pakej [L]
 RewriteRule ^kontak$ main.php?page=kontak [L]
 RewriteRule ^lokasi$ main.php?page=lokasi [L]
+RewriteRule ^galeri$ main.php?page=galeri [L]
+RewriteRule ^testi$ main.php?page=testi [L]
 RewriteRule ^in$ main.php?page=login [L]
 
+RewriteRule ^mint$ mint.php?page=home [L]
 RewriteRule ^mint-edit-deskripsi$ mint.php?page=editdeskripsi [L]
 RewriteRule ^mint-lokasi-(.*)$ mint.php?page=lokasi&hal=$1 [L]
 RewriteRule ^mint-edit-lokasi-(.*)$ mint.php?page=editlokasi&id=$1 [L]
@@ -15,6 +18,8 @@ RewriteRule ^mint-user$ mint.php?page=user [L]
 RewriteRule ^mint-edit-user-(.*)$ mint.php?page=edituser&id=$1 [L]
 RewriteRule ^mint-galeri$ mint.php?page=galeri [L]
 
+RewriteRule ^doLogin$ controller/indexController.php?process=login [L]
+RewriteRule ^doLogout$ controller/indexController.php?process=logout [L]
 RewriteRule ^ubahLokasi-(.*)$ controller/adminController.php?process=ubahLokasi&id=$1 [L]
 RewriteRule ^hapuslokasi-(.*)$ controller/adminController.php?process=deleteLokasi&id=$1 [L]
 RewriteRule ^tambahLokasi$ controller/adminController.php?process=tambahLokasi [L]

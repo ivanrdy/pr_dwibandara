@@ -9,26 +9,31 @@
 ?>
     <body class="skin-blue">
 <?php
-        include("views/a_header.php");
-        	
-        	switch($_GET['page']){
+        if(empty($_SESSION['name'])){
+            include("error.html");
+        }else{
 
-        		case 'editdeskripsi'		 :	include("views/a_edit_deskripsi.php");
-        							            break;
-        		case 'editlokasi'	         :	include("views/a_edit_lokasi.php");
-        			       			            break;
-                case 'lokasi'                : include ("views/a_lokasi.php");
-                                                break;
-                case 'user'                  : include ("views/a_user.php");
-                                               break;
-                case 'edituser'              : include ("views/a_edit_user.php");
-                                                break;             
-                case 'galeri'                : include ("views/a_galeri.php");
-                                                break;
+            include("views/a_header.php");
+             	
+            	switch($_GET['page']){
 
-        	}	
-
-        include("views/a_footer.php");
+                    case 'home'                 :   include("views/a_beranda.php");
+                                                    break;
+            		case 'editdeskripsi'		:	include("views/a_edit_deskripsi.php");
+            							            break;
+            		case 'editlokasi'	        :	include("views/a_edit_lokasi.php");
+            			       			            break;
+                    case 'lokasi'               :   include ("views/a_lokasi.php");
+                                                    break;
+                    case 'user'                 :   include ("views/a_user.php");
+                                                    break;
+                    case 'edituser'             :   include ("views/a_edit_user.php");
+                                                    break;             
+                    case 'galeri'               :   include ("views/a_galeri.php");
+                                                    break;
+            	}	
+            include("views/a_footer.php");
+        }
 ?>
     </body>
 </html>

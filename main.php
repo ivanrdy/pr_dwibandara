@@ -20,6 +20,10 @@
         							break;
         		case 'lokasi'	:	include("views/lokasi.php");
         							break;
+                case 'galeri'   :   include("views/galeri.php");
+                                    break;
+                case 'testi'    :   include("views/testi.php");
+                                    break;
                 case 'login'    :   include("views/login.php");
                                     break;
         		default 		:	include("views/home.php");

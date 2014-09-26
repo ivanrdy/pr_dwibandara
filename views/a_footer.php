@@ -4,5 +4,3 @@
 <script src="assets/js/cms/bootstrap.js" type="text/javascript"></script>
 <!-- AdminLTE App -->
 <script src="assets/js/cms/AdminLTE/app.js" type="text/javascript"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="assets/js/cms/AdminLTE/demo.js" type="text/javascript"></script>

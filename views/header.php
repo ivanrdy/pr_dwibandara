@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="beranda"><img src="assets/img/logo.png" alt="" class="navbar-brand"></a>
+            <a href="beranda" class="navbar-brand lobster" style="font-size: 30px">DWIbandara</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -22,6 +22,16 @@
                 <li class='active' style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
                     <a href="lokasi"><i class="fa fa-globe"></i> Lokasi</a>
+                </li>
+                <?php if($_GET['page']=='galeri'){ ?>
+                <li class="active" style="color:#FFF">
+                <?php }else{ echo "<li>"; } ?>
+                    <a href="galeri"><i class="fa fa-picture-o"></i> Galeri</a>
+                </li>
+                <?php if($_GET['page']=='testi'){ ?>
+                <li class="active" style="color:#FFF">
+                <?php }else{ echo "<li>"; } ?>
+                    <a href="testi"><i class="fa fa-comment"></i> Testimoni</a>
                 </li>
                 <?php if($_GET['page']=='kontak'){ ?>
                 <li class='active' style="color:#FFF">

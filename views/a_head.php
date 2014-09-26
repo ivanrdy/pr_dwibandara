@@ -1,13 +1,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Dwibandara Tour and Travel | Admin</title>
+    <link rel="icon" href="assets/img/ICON 2.png">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
     <link href="assets/css/cms/bootstrap.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
     <link href="assets/css/cms/font-awesome.css" rel="stylesheet" type="text/css" />
-    <!-- Ionicons -->
-    <link href="assets/css/cms/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="assets/css/cms/AdminLTE.css" rel="stylesheet" type="text/css" />
 
