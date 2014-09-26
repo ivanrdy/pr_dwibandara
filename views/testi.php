@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h3><i class="fa fa-comment"></i> Berikan Testimoni Anda</h3><hr>
-            <form action="" method="tambahTesti" role="form">
+            <form action="addTesti" method="post" role="form">
                 <table class="table" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="col-sm-4">

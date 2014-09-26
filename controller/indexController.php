@@ -44,5 +44,32 @@
 			header("location:beranda");
 
 			break;
+
+		case "addtesti":
+
+			$nama = $_POST['nama'];
+			$isi  = $_POST['isi'];
+			$url  = $_POST['url'];
+			$date = date('Y-m-d');
+			$asal = $_POST['asal'];
+			$status = 'Nonaktif';
+
+
+			$query = mysql_query("INSERT INTO testimoni(id,pengirim,url,asal,tanggal,status,isi)
+								VALUES ('','$nama','$url','$asal','$date','$status','$isi')");
+
+			if($query){ 
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('Testimoni berhasil ditambahkan, menunggu moderasi dari Admin. Terimakasih.')
+						window.location.href='$_SERVER[HTTP_REFERER]'
+						</SCRIPT>");
+			}else{
+				echo ("<SCRIPT LANGUAGE='JavaScript'>
+						window.alert('Terjadi kesalahan pada penambahan testimoni, silakan ulangi.')
+						window.location.href='$_SERVER[HTTP_REFERER]'
+						</SCRIPT>");
+			}
+
+			break;
 	}
 ?>

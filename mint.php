@@ -33,6 +33,8 @@
                                                     break;
                     case 'editgaleri'           :   include ("views/a_edit_galeri.php");
                                                     break;                               
+                    case 'testimoni'            :   include ("views/a_testimoni.php");                                                       
+                                                    break;                                
             	}	
             include("views/a_footer.php");
         }
