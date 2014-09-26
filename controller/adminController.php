@@ -347,5 +347,109 @@
 					}
 
 					break;
-		}
+
+
+
+          case "ubahGaleri":
+
+
+          $id         = $_POST['id'];
+          $nama_foto  = $_POST['nama_foto'];
+          $deskripsi  = $_POST['deskripsi'];
+          $tanggal    = date('Y-m-d H:i:s');
+          $status     = 'Aktif';
+          $foto       = $_FILES['foto']['name'];
+                
+          if(empty($foto)){
+
+            $query = mysql_query("UPDATE galeri SET nama='$nama', deskripsi='$deskripsi' WHERE id=$id");
+
+            
+          }else{
+
+            $errors     = array();
+            $maxsize    = 2097152;
+            $acceptable = array(
+                        'image/jpeg',
+                        'image/jpg',
+                        'image/gif',
+                        'image/png'
+                      );
+
+            if(($_FILES['foto']['size'] >= $maxsize) || ($_FILES["foto"]["size"] == 0)) {
+              $errors[] = 'Ukuran gambar terlalu besar, gambar tidak boleh lebih dari 2MB.';
+            }
+
+            if(!in_array($_FILES['foto']['type'], $acceptable) && (!empty($_FILES["foto"]["type"]))) {
+              $errors[] = 'Jenis file tidak diperbolehkan, hanya bisa upload gambar berekstensi jpg/png/gif.';
+            }
+
+            if(count($errors) === 0) {
+              $lokasi_file = $_FILES['foto']['tmp_name'];
+              $dir = "../assets/img/galeri/";
+              $ukuran = $_FILES['foto']['size'];
+              move_uploaded_file($lokasi_file,$dir.$foto);
+            
+              $query = mysql_query("UPDATE galeri SET nama_foto='$nama_foto', deskripsi='$deskripsi' WHERE id=$id");
+
+            } else {
+              foreach($errors as $error) {
+                echo '<script>alert("'.$error.'");</script>';
+                $query = mysql_query("DELETE FROM galeri WHERE id=none");
+              }
+            }             
+          }
+                      
+         if($query){ 
+            echo ("<SCRIPT LANGUAGE='JavaScript'>
+                window.alert('Galeri $nama_foto berhasil ditambahkan.')
+                window.location.href='$_SERVER[HTTP_REFERER]'
+                </SCRIPT>");
+          }else{
+            echo ("<SCRIPT LANGUAGE='JavaScript'>
+                window.alert('Terjadi kesalahan pada penambahan galeri, silakan ulangi.')
+                window.location.href='$_SERVER[HTTP_REFERER]'
+                </SCRIPT>");
+          }
+
+          break;
+
+
+          case "deleteGaleri":
+
+              $id = $_GET['id'];
+
+              $del = mysql_fetch_array(mysql_query("SELECT * FROM galeri WHERE id=$id"));
+                  
+              if(!empty($del['foto'])){ unlink("../assets/img/galeri/$del[foto]"); }
+
+                mysql_query("DELETE FROM galeri WHERE id=$id");
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+                      window.alert('Galeri dihapus.')
+                      window.location.href='$_SERVER[HTTP_REFERER]'
+                      </SCRIPT>");
+              break;
+
+          case "changeStatGaleri":
+
+               $id = $_GET['id'];
+               echo $id;
+
+                 $q = mysql_fetch_array(mysql_query("SELECT * FROM galeri WHERE id=$id")); 
+                  if($q['status'] == "Aktif"){
+                    mysql_query("UPDATE galeri SET status='Tidak Aktif' WHERE id=$id");
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Galeri telah dinonaktifkan.')
+                          window.location.href='$_SERVER[HTTP_REFERER]'
+                          </SCRIPT>");
+                  }else{
+                    mysql_query("UPDATE galeri SET status='Aktif' WHERE id=$id");
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Galeri telah diaktifkan.')
+                          window.location.href='$_SERVER[HTTP_REFERER]'
+                          </SCRIPT>");
+                  }
+                  break;
+		
+    }
 ?>

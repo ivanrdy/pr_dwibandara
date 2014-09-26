@@ -17,22 +17,30 @@
                     <div class="row">
                     <div class="col-sm-12">
                     <div class='col-md-4'>
+                    <?php
+
+                    $id = $_GET['id'];
+                    $q = mysql_query("SELECT * FROM galeri WHERE id = $id");
+                    $fetch = mysql_fetch_array($q);
+
+                    ?>
                         <div class="box box-pinky">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Foto Galeri</h3>
+                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Ubah Foto Galeri</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="tambahGaleri" enctype="multipart/form-data" method="post">
+                            <form role="form" action="ubahGaleri" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Nama Foto</label>
-                                    <input type="text" name="nama_foto" class="form-control" id="exampleInputEmail1" placeholder="Nama Foto">
+                                    <input type='hidden' name='id' value='<?php echo $id; ?>'>
+                                    <input value="<?php echo $fetch['nama_foto']; ?>" type="text" name="nama_foto" class="form-control" id="exampleInputEmail1" placeholder="Nama Foto">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Deskripsi</label>
-                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi Foto"></textarea>
+                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi Foto"><?php echo $fetch['deskripsi']; ?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>

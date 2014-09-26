@@ -31,6 +31,8 @@
                                                     break;             
                     case 'galeri'               :   include ("views/a_galeri.php");
                                                     break;
+                    case 'editgaleri'           :   include ("views/a_edit_galeri.php");
+                                                    break;                               
             	}	
             include("views/a_footer.php");
         }
