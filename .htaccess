@@ -21,6 +21,7 @@ RewriteRule ^mint-galeri$ mint.php?page=galeri [L]
 RewriteRule ^mint-edit-galeri-(.*)$ mint.php?page=editgaleri&id=$1 [L]
 RewriteRule ^mint-testi-(.*)$ mint.php?page=testimoni&hal=$1 [L]
 RewriteRule ^mint-readMsg-(.*)$ mint.php?page=readMsg&id=$1 [L]
+RewriteRule ^mint-paket$ mint.php?page=paket [L]
 
 RewriteRule ^doLogin$ controller/indexController.php?process=login [L]
 RewriteRule ^doLogout$ controller/indexController.php?process=logout [L]

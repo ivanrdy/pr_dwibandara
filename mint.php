@@ -38,7 +38,9 @@
                     case 'testimoni'            :   include ("views/a_testimoni.php");                                                       
                                                     break;                                
                     case 'readMsg'              :   include ("views/a_read.php");                                                       
-                                                    break;                               
+                                                    break;         
+                    case 'paket'                :   include ("views/a_paket.php");                                                                              
+                                                     break;                                                      
             	}	
             include("views/a_footer.php");
         }
