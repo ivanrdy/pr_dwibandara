@@ -41,7 +41,10 @@
                                                     break;         
                     case 'paket'                :   include ("views/a_paket.php");                                                                              
                                                      break;                                                      
-            	}	
+            	    case 'editpaket'            :   include ("views/a_edit_paket.php");
+                                                     break;
+                }	
+
             include("views/a_footer.php");
         }
 ?>

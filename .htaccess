@@ -22,6 +22,7 @@ RewriteRule ^mint-edit-galeri-(.*)$ mint.php?page=editgaleri&id=$1 [L]
 RewriteRule ^mint-testi-(.*)$ mint.php?page=testimoni&hal=$1 [L]
 RewriteRule ^mint-readMsg-(.*)$ mint.php?page=readMsg&id=$1 [L]
 RewriteRule ^mint-paket$ mint.php?page=paket [L]
+RewriteRule ^mint-edit-paket-(.*)$ mint.php?page=editpaket&id=$1 [L]
 
 RewriteRule ^doLogin$ controller/indexController.php?process=login [L]
 RewriteRule ^doLogout$ controller/indexController.php?process=logout [L]
@@ -42,5 +43,7 @@ RewriteRule ^ubahstatusgaleri-(.*)$ controller/adminController.php?process=chang
 RewriteRule ^addTesti$ controller/indexController.php?process=addtesti [L]
 RewriteRule ^ubahstatustesti-(.*)$ controller/adminController.php?process=changeStatTesti&id=$1 [L]
 RewriteRule ^deleteTesti-(.*)$ controller/adminController.php?process=deleteTesti&id=$1 [L]
+RewriteRule ^tambahPaket$ controller/adminController.php?process=tambahPaket [L]
+RewriteRule ^ubahpaket$ controller/adminController.php?process=editPaket&id=$1 [L]
 
 Options All -Indexes

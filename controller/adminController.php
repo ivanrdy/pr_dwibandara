@@ -481,6 +481,57 @@
                       window.location.href='$_SERVER[HTTP_REFERER]'
                       </SCRIPT>");
               break;
-		
+		     
+
+          case"tambahPaket":
+
+              $paket                = $_POST['paket'];
+              $durasi               = $_POST['durasi'];
+              $ongkos_bandung       = $_POST['ongkos_bandung'];
+              $ongkos_jakarta       = $_POST['ongkos_jakarta'];
+              $status               = "Aktif";
+
+                   $query = mysql_query("INSERT INTO paket(paket,durasi,ongkos_bandung,ongkos_jakarta,status)
+                             VALUES('$paket','$durasi','$ongkos_bandung','$ongkos_jakarta','$status')"); 
+
+              echo"$query";
+              if($query){ 
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+                      window.alert('Paket berhasil ditambahkan.')
+                      window.location.href='mint-paket'
+                      </SCRIPT>");
+              }else{
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+                      window.alert('Paket gagal ditambahkan.')
+                      window.location.href='$_SERVER[HTTP_REFERER]'                               
+                      </SCRIPT>");
+              }
+                   
+              break;
+
+
+
+              case "editPaket":
+                  $id               = $_POST['id'];
+                  $paket            = $_POST['paket'];
+                  $durasi           = $_POST['durasi'];
+                  $ongkos_bandung   = $_POST['ongkos_bandung'];
+                  $ongkos_jakarta   = $_POST['ongkos_jakarta'];
+
+                   $query = mysql_query("UPDATE paket SET paket='$username', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
+
+                  if($query){ 
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Paket berhasil diperbarui.')
+                          window.location.href='mint-edit-paket-1'
+                          </SCRIPT>");
+                  }else{
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Paket gagal diperbarui.')
+                          window.location.href='$_SERVER[HTTP_REFERER]'
+                          </SCRIPT>");
+                  } 
+                       
+                  break;
     }
 ?>

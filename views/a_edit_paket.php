@@ -17,6 +17,13 @@
                     <div class="row">
                     <div class="col-sm-12">
                         <div class='col-sm-4'>
+                            <?php
+
+                            $id = $_GET['id'];
+                            $q = mysql_query("SELECT * FROM paket WHERE id = $id");
+                            $fetch = mysql_fetch_array($q);
+
+                            ?>
                             <div class="box box-primary">
                                 <div class="box-header">
                                     <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Paket</h3>
@@ -28,7 +35,8 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="nama">Paket</label>
-                                        <input type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Masukan Nama Paket">
+                                        <input type='hidden' name='id' value='<?php echo $id; ?>'>
+                                        <input value="<?php echo $fetch['paket']; ?>" type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Ganti Nama Paket">
                                     </div>
                                     <div class="box-body">
                                     <div class="form-group">
@@ -39,11 +47,13 @@
                                     </div>                                    
                                     <div class="form-group">
                                         <label for="nama">Ongkos dari Bandung (Harga per seorang)</label>
-                                        <input type="text" name="ongkos_bandung" class="form-control" id="exampleInputEmail1" placeholder="Ongkos dari Bandung">
+                                        <input type='hidden' name='id' value='<?php echo $id; ?>'>
+                                        <input value="<?php echo $fetch['ongkos_bandung']; ?>" type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Ganti Harga Ongkos Dari Bandung">
                                     </div>
                                      <div class="form-group">
                                         <label for="nama">Ongkos dari Jakarta (Harga per seorang)</label>
-                                        <input type="text" name="ongkos_jakarta" class="form-control" id="exampleInputEmail1" placeholder="Ongkos dari Jakarta">
+                                        <input type='hidden' name='id' value='<?php echo $id; ?>'>
+                                        <input value="<?php echo $fetch['ongkos_jakarta']; ?>" type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Ganti Harga Ongkos Dari Jakarta">
                                     </div>                                    
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
@@ -59,7 +69,7 @@
                         <!-- Primary box -->
                         <div class="box box-primary">
                             <div class="box-header">
-                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
+                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Paket Wisata DwiBandara</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
