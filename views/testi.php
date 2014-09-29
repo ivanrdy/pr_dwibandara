@@ -63,59 +63,41 @@
     <div class="row">
         <div class="col-sm-12 ">
         <h3><i class="fa fa-comment"></i> Testimoni Dari Pelanggan</h3><hr>
-            <div class="col-sm-6">
-                <blockquote class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet. Null vaula modrefokre est tunga sur bavel dahker, trevio as must adver mil bassia.
-                       Lorem ipsum dolor sit amet. Null vaula modrefokre est tunga sur bavel dahker, trevio as must adver mil bassia.
-                    </p>
-                    <small>Yogi Simbolon, Malaysia</small>
-                </blockquote>
-
-                <blockquote class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet. Null vaula modrefokre est tunga sur bavel dahker, trevio as must adver mil bassia.</p>
-                    <small>Yogi Simbolon, Malaysia</small>
-                </blockquote>
-            </div>
-            <div class="col-sm-6">
-                <blockquote class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet. Null vaula modrefokre est tunga sur bavel dahker, trevio as must adver mil bassia.</p>
-                    <small>Yogi Simbolon, Malaysia</small>
-                </blockquote>
-
-                <blockquote class="col-sm-12">
-                    <p>Lorem ipsum dolor sit amet. Null vaula modrefokre est tunga sur bavel dahker, trevio as must adver mil bassia.</p>
-                    <small>Yogi Simbolon, Malaysia</small>
-                </blockquote>
+            <div class="col-sm-12">
+                <?php 
+                    $data   = (mysql_query("SELECT * FROM testimoni"));
+                    $p      = new pagingTestiShow;
+                    $batas  = 10;
+                    $posisi = $p->cariPosisi($batas);
+                    $q      = mysql_query("SELECT * FROM testimoni WHERE status='Aktif' ORDER BY tanggal ASC LIMIT $posisi, $batas");
+                    if(mysql_num_rows($q)==0){
+                        echo"Tidak ada testimoni.";
+                    }else{
+                    while($odd=mysql_fetch_array($q)){
+                 ?>
+                    <blockquote class="col-sm-6">
+                        <p><?php echo $odd['isi']; ?>
+                        </p>
+                        <small><?php echo "$odd[pengirim] ($odd[url]), $odd[asal]"; ?></small>
+                    </blockquote>
+                <?php 
+                    }
+                    $jmldata    =   mysql_num_rows(mysql_query("SELECT * FROM testimoni WHERE status='Aktif'"));
+                    $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
+                    $linkHalaman=   $p->navHalaman($_GET['hal'],$jmlhalaman);
+                } 
+                echo"
             </div>
         </div>
     </div>
 
     <!-- Pagination -->
-    <div class="row text-center">
-        <div class="col-lg-12">
-            <ul class="pagination">
-                <li>
-                    <a href="#">&laquo;</a>
-                </li>
-                <li class="active">
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">&raquo;</a>
-                </li>
-            </ul>
+    <div class='row text-center'>
+        <div class='col-lg-12'>
+            <ul class='pagination'>
+                $linkHalaman
+            </ul>";
+            ?>
         </div>
     </div>
     <!-- /.row -->

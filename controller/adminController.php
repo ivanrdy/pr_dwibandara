@@ -450,6 +450,37 @@
                           </SCRIPT>");
                   }
                   break;
+
+          case "changeStatTesti":
+
+               $id = $_GET['id'];
+
+                 $q = mysql_fetch_array(mysql_query("SELECT * FROM testimoni WHERE id=$id")); 
+                  if($q['status'] == "Aktif"){
+                    mysql_query("UPDATE testimoni SET status='Nonaktif' WHERE id=$id");
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Testimoni telah dinonaktifkan.')
+                          window.location.href='$_SERVER[HTTP_REFERER]'
+                          </SCRIPT>");
+                  }else{
+                    mysql_query("UPDATE Testimoni SET status='Aktif' WHERE id=$id");
+                    echo ("<SCRIPT LANGUAGE='JavaScript'>
+                          window.alert('Galeri telah diaktifkan.')
+                          window.location.href='$_SERVER[HTTP_REFERER]'
+                          </SCRIPT>");
+                  }
+                  break;
+
+          case "deleteTesti":
+
+              $id = $_GET['id'];
+
+                mysql_query("DELETE FROM testimoni WHERE id=$id");
+                echo ("<SCRIPT LANGUAGE='JavaScript'>
+                      window.alert('Testimoni dihapus.')
+                      window.location.href='$_SERVER[HTTP_REFERER]'
+                      </SCRIPT>");
+              break;
 		
     }
 ?>

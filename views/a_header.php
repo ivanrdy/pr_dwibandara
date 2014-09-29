@@ -14,31 +14,6 @@
         </a>
            <div class="navbar-right">
             <ul class="nav navbar-nav">
-            
-                <!-- Messages: style can be found in dropdown.less-->
-                <li class="dropdown messages-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-envelope"></i>
-                        <span class="label label-success"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li class="header"></li>
-                        <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu">
-                            
-                                <li><!-- start message -->
-                                    <a href="">
-                                        <div class='pull-left'>
-                                         
-                                    </a>
-                                </li><!-- end message -->
-                            
-                            </ul>
-                        </li>
-                        <li class="footer"><a href="mint-mailbox-1">Lihat Seluruh Pesan</a></li>
-                    </ul>
-                </li>
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -76,27 +51,36 @@
             </div>
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
-                <li class="active">
-                    <a href="index.html">
+                <li>
+                    <a href="mint">
                         <i class="fa fa-dashboard"></i> <span>Dasbor</span>
                     </a>
                 </li>
                 <li>
-                    <a href="widgets.html">
-                        <i class="fa fa-th"></i> <span>Kotak Pesan</span> <small class="badge pull-right bg-green">new</small>
+                    <a href="mint-paket">
+                        <i class="fa fa-picture-o"></i> <span>Paket</span>
                     </a>
                 </li>
+                <li>
+                    <a href="mint-testi-1">
+                        <i class="fa fa-th"></i> <span>Testimoni</span>
+                    </a>
+                </li>
+                <?php 
+                    if($_GET['page']=='home' || $_GET['page']=='paket' || $_GET['page']=='testimoni'){
+                ?>
                 <li class="treeview">
+                <?php }else{ echo"<li class='active treeview'>"; } ?>
                     <a href="#">
                         <i class="fa fa-bar-chart-o"></i>
-                        <span>Data</span>
+                        <span>Manage Data</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="charts/#.html"><i class="fa fa-angle-double-right"></i> Paket</a></li>
-                        <li><a href="charts/#.html"><i class="fa fa-angle-double-right"></i> Lokasi</a></li>
-                        <li><a href="charts/#.html"><i class="fa fa-angle-double-right"></i> User</a></li>
-                        <li><a href="charts/#.html"><i class="fa fa-angle-double-right"></i> Deskripsi Dwibandara</a></li>
+                        <li><a href="mint-galeri"><i class="fa fa-chevron-right"></i> Galeri</a></li>
+                        <li><a href="mint-lokasi-1"><i class="fa fa-chevron-right"></i> Lokasi</a></li>
+                        <li><a href="mint-user"><i class="fa fa-chevron-right"></i> User</a></li>
+                        <li><a href="mint-edit-deskripsi"><i class="fa fa-chevron-right"></i> Deskripsi Dwibandara</a></li>
                     </ul>
                 
                 </li>

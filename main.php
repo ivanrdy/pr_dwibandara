@@ -3,6 +3,7 @@
 <?php    
     //Include
     include("lib/conn.php");
+    include("lib/paginator.php");
     include("views/head.php");    
     session_start();
 ?>

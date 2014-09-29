@@ -3,12 +3,13 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Lokasi
+                        <small>Panel Administrator</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="mint"><i class="fa fa-dashboard"></i> Beranda</a></li>
+                        <li><a href="mint-lokasi"></a> Lokasi</li>
+                        <li class="active">Edit Lokasi</li>
                     </ol>
                 </section>
 
@@ -24,11 +25,11 @@
                     $fetch = mysql_fetch_array($q);
 
                     ?>
-                        <div class="box box-pinky">
+                        <div class="box box-primary">
                             <div class="box-header">
                                 <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Ubah Lokasi Wisata</h3>
                                 <div class="box-tools pull-right">
-                                    <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                    <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
                             <form role="form" action="ubahLokasi-$id" enctype="multipart/form-data" method="post">
@@ -49,7 +50,7 @@
                                 </div>
                             </div><!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>
+                                <button type="submit" class="btn btn-primary"><i class='fa fa-check'></i> Simpan</button>
                                                
                                 <input type="reset" class="btn btn-default" value="Ulangi">
                             </div>
@@ -58,11 +59,11 @@
                     </div>
                     <div class="col-md-8">
                         <!-- Primary box -->
-                        <div class="box box-pinky">
+                        <div class="box box-primary">
                             <div class="box-header">
                                  <h3 class="box-title"><i class="fa fa-picture-o"></i>List Lokasi Wisata</h3>
                                 <div class="box-tools pull-right">
-                                    <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                    <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
                             <div class="box-body">

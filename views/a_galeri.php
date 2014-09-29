@@ -3,12 +3,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Blank page
-                        <small>Control panel</small>
+                        Galeri
+                        <small>Panel Administrator</small>
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Blank page</li>
+                        <li><a href="mint"><i class="fa fa-dashboard"></i> Beranda</a></li>
+                        <li class="active">Galeri</li>
                     </ol>
                 </section>
 
@@ -17,11 +17,11 @@
                     <div class="row">
                     <div class="col-sm-12">
                     <div class='col-md-4'>
-                        <div class="box box-pinky">
+                        <div class="box box-primary">
                             <div class="box-header">
                                 <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Foto Galeri</h3>
                                 <div class="box-tools pull-right">
-                                    <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                    <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
                             <form role="form" action="tambahGaleri" enctype="multipart/form-data" method="post">
@@ -41,7 +41,7 @@
                                 </div>
                             </div><!-- /.box-body -->
                             <div class="box-footer">
-                                <button type="submit" class="btn btn-tosca"><i class='fa fa-check'></i> Simpan</button>
+                                <button type="submit" class="btn btn-primary"><i class='fa fa-check'></i> Simpan</button>
                                                
                                 <input type="reset" class="btn btn-default" value="Ulangi">
                             </div>
@@ -50,11 +50,11 @@
                     </div>
                     <div class="col-md-8">
                         <!-- Primary box -->
-                        <div class="box box-pinky">
+                        <div class="box box-primary">
                             <div class="box-header">
                                  <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
                                 <div class="box-tools pull-right">
-                                    <button class="btn btn-pinky btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                    <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
                             <div class="box-body">
@@ -69,12 +69,12 @@
                                             <th colspan=3>Tindakan</th>
                                         </tr>
                                         </thead>
-                                             <?php
+                                            <?php
 
                                             $data   = (mysql_query("SELECT * FROM galeri"));
-                                           $p      = new pagingGaleri;
+                                            $p      = new pagingGaleri;
                                             $batas  = 10;
-                                           $posisi = $p->cariPosisi($batas);
+                                            $posisi = $p->cariPosisi($batas);
                                             $a      = mysql_query("SELECT * FROM galeri ORDER BY nama_foto ASC LIMIT $posisi, $batas");
                                             if(mysql_num_rows($a)==0){
                                                 echo"<tr><td>Galeri tidak ditemukan.</td></tr></tbody></table>";
@@ -96,7 +96,7 @@
                                             </tr>";
                                             }
                                             $jmldata    =   mysql_num_rows(mysql_query("SELECT * FROM galeri"));
-                                               $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
+                                            $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
                                             $linkHalaman=   $p->navHalaman($_GET['hal'],$jmlhalaman);                              
                                              
                                             }

@@ -19,6 +19,8 @@
 
                     case 'home'                 :   include("views/a_beranda.php");
                                                     break;
+                    case 'paket'                :   include("views/a_paket.php");
+                                                    break;
             		case 'editdeskripsi'		:	include("views/a_edit_deskripsi.php");
             							            break;
             		case 'editlokasi'	        :	include("views/a_edit_lokasi.php");
@@ -35,6 +37,8 @@
                                                     break;                               
                     case 'testimoni'            :   include ("views/a_testimoni.php");                                                       
                                                     break;                                
+                    case 'readMsg'              :   include ("views/a_read.php");                                                       
+                                                    break;                               
             	}	
             include("views/a_footer.php");
         }

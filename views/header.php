@@ -31,7 +31,7 @@
                 <?php if($_GET['page']=='testi'){ ?>
                 <li class="active" style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="testi"><i class="fa fa-comment"></i> Testimoni</a>
+                    <a href="testi-1"><i class="fa fa-comment"></i> Testimoni</a>
                 </li>
                 <?php if($_GET['page']=='kontak'){ ?>
                 <li class='active' style="color:#FFF">
