@@ -3,12 +3,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Galeri
+                        Paket
                         <small>Panel Administrator</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="mint"><i class="fa fa-dashboard"></i> Beranda</a></li>
-                        <li class="active">Galeri</li>
+                        <li class="active">Paket</li>
                     </ol>
                 </section>
 
@@ -59,7 +59,7 @@
                         <!-- Primary box -->
                         <div class="box box-primary">
                             <div class="box-header">
-                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
+                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Paket Wisata DwiBandara</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>

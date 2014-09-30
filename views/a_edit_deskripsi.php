@@ -50,19 +50,13 @@
                                                 <input type="text" name="email" class="form-control" id="wa" placeholder="E-mail" value='<?php echo $q['email']; ?>'>
                                             </div>
                                              
-                                        </td>
-                                        <td>
-                                            <div class="form-group">
-                                                <label for="blog"><i class='fa fa-envelope'></i> Blog</label>
-                                                <input type="text" name="blog" class="form-control" id="wa" placeholder="Blog" value='<?php echo $q['blog']; ?>'>
-                                            </div>                                             
-                                        </td>
+                                        </td>                                        
                                     </tr>
                                     <tr>
                                         <td colspan=4>                                            
                                             <div class="form-group">
                                                 <label for="alamat"><i class='fa fa-home'></i> Alamat</label>
-                                                <textarea name='alamat' class='form-control full-width' placeholder="Alamat Toko"><?php echo $q['alamat']; ?></textarea>
+                                                <textarea name='alamat' class='form-control full-width' placeholder="Alamat"><?php echo $q['alamat']; ?></textarea>
                                             </div>                                            
                                         </td>     
                                     </tr>

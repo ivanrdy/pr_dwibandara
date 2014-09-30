@@ -200,7 +200,7 @@
 								  </SCRIPT>");
 					}else{
 						echo ("<SCRIPT LANGUAGE='JavaScript'>
-								  window.alert('Kontak gagal diperbarui.')
+								  window.alert('User gagal diperbarui.')
 								  window.location.href='$_SERVER[HTTP_REFERER]'
 								  </SCRIPT>");
 					} 
@@ -245,12 +245,11 @@
 			case "ubahKontak":
 
 					$alamat   = $_POST['alamat'];
-					$email    = $_POST['email'];
-					$blog     = $_POST['blog'];
+					$email    = $_POST['email'];				
 					$telpon_1  = $_POST['telepon_1'];                        
 					$telpon_2  = $_POST['telepon_2'];
 
-					$query = mysql_query("UPDATE kontak SET alamat='$alamat',email='$email',blog='$blog',telpon_1='$telpon_1',telpon_2='$telpon_2'");
+					$query = mysql_query("UPDATE kontak SET alamat='$alamat',email='$email',telpon_1='$telpon_1',telpon_2='$telpon_2'");
 
 					if($query){ 
 					   echo ("<SCRIPT LANGUAGE='JavaScript'>
