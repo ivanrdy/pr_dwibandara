@@ -94,12 +94,12 @@
                                                 <td>$b[durasi]</td>                                                                
                                                 <td>$b[ongkos_bandung]</td>
                                                 <td>$b[ongkos_jakarta]</td>                                              
-                                                <td><a href='mint-edit-galeri-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
-                                                <td><a href='hapusgaleri-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
+                                                <td><a href='mint-edit-paket-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
+                                                <td><a href='deletepaket-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
                                                 if($b['status']=='Aktif'){
-                                                    echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatuspaket-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
                                                 }else{
-                                                    echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatuspaket-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
                                                 }
                                                 echo"
                                             </tr>";

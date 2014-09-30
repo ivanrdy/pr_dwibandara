@@ -31,7 +31,7 @@
                                         <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                     </div>
                                 </div>
-                                <form role="form" action="tambahPaket" method="post">
+                                <form role="form" action="ubahpaket" method="post">
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="nama">Paket</label>
@@ -47,13 +47,11 @@
                                     </div>                                    
                                     <div class="form-group">
                                         <label for="nama">Ongkos dari Bandung (Harga per seorang)</label>
-                                        <input type='hidden' name='id' value='<?php echo $id; ?>'>
-                                        <input value="<?php echo $fetch['ongkos_bandung']; ?>" type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Ganti Harga Ongkos Dari Bandung">
+                                        <input type="text" name="ongkos_bandung" class="form-control" id="wa" placeholder="Silahkan Ganti Harga Ongkos Dari Bandung" value='<?php echo $q['ongkos_bandung']; ?>'>
                                     </div>
                                      <div class="form-group">
                                         <label for="nama">Ongkos dari Jakarta (Harga per seorang)</label>
-                                        <input type='hidden' name='id' value='<?php echo $id; ?>'>
-                                        <input value="<?php echo $fetch['ongkos_jakarta']; ?>" type="text" name="paket" class="form-control" id="exampleInputEmail1" placeholder="Silahkan Ganti Harga Ongkos Dari Jakarta">
+                                       <input type="text" name="ongkos_jakarta" class="form-control" id="wa" placeholder="Silahkan Ganti Harga Ongkos Dari Jakarta" value='<?php echo $q['ongkos_jakarta']; ?>'>
                                     </div>                                    
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
@@ -104,12 +102,12 @@
                                                 <td>$b[durasi]</td>                                                                
                                                 <td>$b[ongkos_bandung]</td>
                                                 <td>$b[ongkos_jakarta]</td>                                              
-                                                <td><a href='mint-edit-galeri-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
-                                                <td><a href='hapusgaleri-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
+                                                <td><a href='mint-edit-paket-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
+                                                <td><a href='deletepaket-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
                                                 if($b['status']=='Aktif'){
-                                                    echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatuspaket-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
                                                 }else{
-                                                    echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
+                                                    echo"<td><a href='ubahstatuspaket-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
                                                 }
                                                 echo"
                                             </tr>";

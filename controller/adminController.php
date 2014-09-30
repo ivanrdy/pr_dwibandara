@@ -465,7 +465,7 @@
                   }else{
                     mysql_query("UPDATE Testimoni SET status='Aktif' WHERE id=$id");
                     echo ("<SCRIPT LANGUAGE='JavaScript'>
-                          window.alert('Galeri telah diaktifkan.')
+                          window.alert('Testimoni telah diaktifkan.')
                           window.location.href='$_SERVER[HTTP_REFERER]'
                           </SCRIPT>");
                   }
@@ -518,7 +518,7 @@
                   $ongkos_bandung   = $_POST['ongkos_bandung'];
                   $ongkos_jakarta   = $_POST['ongkos_jakarta'];
 
-                   $query = mysql_query("UPDATE paket SET paket='$username', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
+                   $query = mysql_query("UPDATE paket SET paket='$paket', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
 
                   if($query){ 
                     echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -533,5 +533,37 @@
                   } 
                        
                   break;
+
+                case "deletePaket":
+
+                    $id = $_GET['id'];
+
+                        mysql_query("DELETE FROM paket WHERE id=$id");
+                        echo ("<SCRIPT LANGUAGE='JavaScript'>
+                              window.alert('Paket berhasil dihapus.')
+                              window.location.href='$_SERVER[HTTP_REFERER]'
+                              </SCRIPT>");
+                      break;
+                  
+                case "changeStatPaket":
+
+                     $id = $_GET['id'];
+
+                       $q = mysql_fetch_array(mysql_query("SELECT * FROM paket WHERE id=$id")); 
+                        if($q['status'] == "Aktif"){
+                          mysql_query("UPDATE paket SET status='Nonaktif' WHERE id=$id");
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('Paket telah dinonaktifkan.')
+                                window.location.href='$_SERVER[HTTP_REFERER]'
+                                </SCRIPT>");
+                        }else{
+                          mysql_query("UPDATE paket SET status='Aktif' WHERE id=$id");
+                          echo ("<SCRIPT LANGUAGE='JavaScript'>
+                                window.alert('Paket telah diaktifkan.')
+                                window.location.href='$_SERVER[HTTP_REFERER]'
+                                </SCRIPT>");
+                        }
+                        break;
+
     }
 ?>
