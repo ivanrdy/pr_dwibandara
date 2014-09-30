@@ -7,6 +7,10 @@
                         <small>Panel administrator</small>
                     </h1>
                     <section class="content">
+                    <h4 class="page-header">
+                        Panel Admin DwiBandara Tour and Travel&reg;
+                        <small>Disini admin dapat me-<i>review</i> testimoni, paket wisata dan galeri. Klik navigasi di sebelah kiri untuk lebih lengkapnya.</small>
+                    </h4>
                     
                     <div class='col-md-12' style='margin-bottom:10px'>                        
                         <a class="btn btn-app" href='mint-lokasi-1'>
@@ -32,7 +36,11 @@
                         <div class="box box-primary">
                             <div class="box-header">
                                 <h3 class="box-title"><i class="fa fa-picture-o"></i> List Testimoni</h3>
+                                <div class="box-tools pull-right">
+                                    <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                </div>
                             </div>
+
                             <div class="box-body">
                                 <table class="table table-mailbox">
                                         <thead>
@@ -87,7 +95,10 @@
                         <!-- Primary box -->
                         <div class="box box-primary">
                             <div class="box-header">
-                                 <h3 class="box-title"><i class="fa fa-picture-o"></i> List Paket Wisata DwiBandara</h3>                                
+                                 <h3 class="box-title"><i class="fa fa-picture-o"></i> List Paket Wisata DwiBandara</h3> 
+                                 <div class="box-tools pull-right">
+                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                 </div>                               
                             </div>
                             <div class="box-body">
                                 <div class="table-responsive">
@@ -146,7 +157,70 @@
                             </div><!-- /.box-footer-->
                         </div><!-- /.box -->
                         </div><!-- /.box -->
+                        <div class="col-md-12">
+                            <!-- Primary box -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                     <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
+                                    <div class="box-tools pull-right">
+                                        <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="table-responsive">
+                                        <!-- THE MESSAGES -->
+                                        <table class="table table-striped">
+                                            <thead>
+                                            <tr>
+                                                <th>Nama </th>                                       
+                                                <th>Deskripsi</th>
+                                                <th>Status</th>
+                                                <th colspan=3>Tindakan</th>
+                                            </tr>
+                                            </thead>
+                                                <?php
 
+                                                $data   = (mysql_query("SELECT * FROM galeri"));
+                                                $p      = new pagingGaleri;
+                                                $batas  = 10;
+                                                $posisi = $p->cariPosisi($batas);
+                                                $a      = mysql_query("SELECT * FROM galeri ORDER BY nama_foto ASC LIMIT $posisi, $batas");
+                                                if(mysql_num_rows($a)==0){
+                                                    echo"<tr><td>Galeri tidak ditemukan.</td></tr></tbody></table>";
+                                                }else{
+                                                while($b=mysql_fetch_array($a)){
+                                                echo"
+                                                <tr>                                                
+                                                    <td>$b[nama_foto]</td>
+                                                    <td>$b[deskripsi]</td>                                                 
+                                                    <td>$b[status]</td>                                              
+                                                    <td><a href='mint-edit-galeri-$b[id]'><i class='glyphicon glyphicon-edit'></i> Ubah</a></td>
+                                                    <td><a href='hapusgaleri-$b[id]'><i class='glyphicon glyphicon-remove'></i> Hapus</a></td>";
+                                                    if($b['status']=='Aktif'){
+                                                        echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ban-circle'></i> Nonaktifkan</a></td>";
+                                                    }else{
+                                                        echo"<td><a href='ubahstatusgaleri-$b[id]'><i class='glyphicon glyphicon-ok'></i> Aktifkan</a></td>";
+                                                    }
+                                                    echo"
+                                                </tr>";
+                                                }
+                                                $jmldata    =   mysql_num_rows(mysql_query("SELECT * FROM galeri"));
+                                                $jmlhalaman =   $p->jumlahHalaman($jmldata, $batas);
+                                                $linkHalaman=   $p->navHalaman($_GET['hal'],$jmlhalaman);                              
+                                                 
+                                                }
+                                        echo"     
+                                        </table>
+                                    </div><!-- /.table-responsive -->
+                                </div><!-- /.box-body -->                                                      
+                                <div class='box-footer clearfix'>";
+                                
+                                // displaying paginaiton.
+                                    echo "<ul class='pagination pagination-sm no-margin pull-right'>$linkHalaman</ul>";
+                                ?>
+                                </div><!-- /.box-footer-->
+                            </div><!-- /.box -->
+                        </div><!-- /.col -->
                     </div>                 
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->  
