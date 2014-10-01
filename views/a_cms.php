@@ -24,7 +24,7 @@
                                 <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                         </div>
-                        <form role="form" action="ubahkontak" method="post">
+                        <form role="form" action="ubahnav" method="post">
                         <div class="box-body">
                         <table class='table'>
                         <?php
@@ -54,7 +54,7 @@
                                 <td>
                                     <div class="form-group">
                                         <label for="testi"><i class='fa fa-comment'></i> Testimoni</label>
-                                        <input type="text" name="testimoni" class="form-control" placeholder="Testimoni" value='<?php echo $q['testi']; ?>'>
+                                        <input type="text" name="testi" class="form-control" placeholder="Testimoni" value='<?php echo $q['testi']; ?>'>
                                     </div>                                     
                                 </td>  
                                 <td>
@@ -68,7 +68,7 @@
                                 <td colspan=5>                                            
                                     <div class="form-group">
                                         <label for="alamat"><i class='fa fa-home'></i> Judul</label>
-                                        <textarea name='alamat' class='form-control full-width' placeholder="Alamat"><?php echo $q['banner']; ?></textarea>
+                                        <textarea name='banner' class='form-control full-width' placeholder="Alamat"><?php echo $q['banner']; ?></textarea>
                                     </div>                                            
                                 </td>     
                             </tr>
@@ -92,29 +92,29 @@
                                 <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                         </div>
-                        <form role="form" action="ubahdeskripsi" enctype="multipart/form-data" method="post">
+                        <form role="form" action="ubahheading" enctype="multipart/form-data" method="post">
                         <div class="box-body">
                             <table class='table'>
                                 <tr>
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-plane'></i> Pilihan Paket Wisata</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['paket_home']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['paketsub_home']; ?>'>
+                                            <input type="text" name="pakethome" class="form-control" placeholder="Heading" value='<?php echo $q['paket_home']; ?>'>
+                                            <input type="text" name="paketsubhome" class="form-control" placeholder="Subheading" value='<?php echo $q['paketsub_home']; ?>'>
                                         </div>                                         
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-globe'></i> Keunggulan</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['unggul_home']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['unggulsub_home']; ?>'>
+                                            <input type="text" name="unggulhome" class="form-control" placeholder="Heading" value='<?php echo $q['unggul_home']; ?>'>
+                                            <input type="text" name="unggulsubhome" class="form-control" placeholder="Subheading" value='<?php echo $q['unggulsub_home']; ?>'>
                                         </div>  
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-list-ul'></i> Halaman Paket</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['head_paket']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_paket']; ?>'>
+                                            <input type="text" name="pakethead" class="form-control" placeholder="Heading" value='<?php echo $q['head_paket']; ?>'>
+                                            <input type="text" name="paketsub" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_paket']; ?>'>
                                         </div>  
                                     </td>
                                 </tr>
@@ -122,22 +122,22 @@
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-globe'></i> Halaman Lokasi</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['head_lokasi']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_lokasi']; ?>'>
+                                            <input type="text" name="lokasihead" class="form-control" placeholder="Heading" value='<?php echo $q['head_lokasi']; ?>'>
+                                            <input type="text" name="lokasisub" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_lokasi']; ?>'>
                                         </div>                                         
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-picture-o'></i> Halaman Galeri</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['head_galeri']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_galeri']; ?>'>
+                                            <input type="text" name="galerihead" class="form-control" placeholder="Heading" value='<?php echo $q['head_galeri']; ?>'>
+                                            <input type="text" name="galerisub" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_galeri']; ?>'>
                                         </div>  
                                     </td>
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-envelope-o'></i> Halaman Kontak</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['head_kontak']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_kontak']; ?>'>
+                                            <input type="text" name="kontakhead" class="form-control" placeholder="Heading" value='<?php echo $q['head_kontak']; ?>'>
+                                            <input type="text" name="kontaksub" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_kontak']; ?>'>
                                         </div>    
                                     </td>
                                 </tr>
@@ -145,8 +145,8 @@
                                     <td>
                                         <div class="form-group">
                                             <label for="kontak"><i class='fa fa-comment'></i> Halaman Testimoni</label>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Heading" value='<?php echo $q['head_testi']; ?>'>
-                                            <input type="text" name="kontak" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_testi']; ?>'>
+                                            <input type="text" name="testihead" class="form-control" placeholder="Heading" value='<?php echo $q['head_testi']; ?>'>
+                                            <input type="text" name="testisub" class="form-control" placeholder="Subheading" value='<?php echo $q['sub_testi']; ?>'>
                                         </div>                                         
                                     </td>
                                     <td>

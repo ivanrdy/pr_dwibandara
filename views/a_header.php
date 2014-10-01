@@ -72,7 +72,7 @@
                     </a>
                 </li>
                 <?php 
-                    if($_GET['page']=='home' || $_GET['page']=='paket' || $_GET['page']=='testimoni'){
+                    if($_GET['page']=='home' || $_GET['page']=='paket' || $_GET['page']=='testimoni' || $_GET['page']=='editpaket'){
                 ?>
                 <li class="treeview">
                 <?php }else{ echo"<li class='active treeview'>"; } ?>

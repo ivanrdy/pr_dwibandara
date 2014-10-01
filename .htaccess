@@ -48,5 +48,7 @@ RewriteRule ^tambahPaket$ controller/adminController.php?process=tambahPaket [L]
 RewriteRule ^ubahpaket$ controller/adminController.php?process=editPaket&id=$1 [L]
 RewriteRule ^deletepaket-(.*)$ controller/adminController.php?process=deletePaket&id=$1 [L]
 RewriteRule ^ubahstatuspaket-(.*)$ controller/adminController.php?process=changeStatPaket&id=$1 [L]
+RewriteRule ^ubahnav$ controller/adminController.php?process=changeNav [L]
+RewriteRule ^ubahheading$ controller/adminController.php?process=changeHeading [L]
 
 Options All -Indexes

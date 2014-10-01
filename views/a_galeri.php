@@ -52,7 +52,7 @@
                         <!-- Primary box -->
                         <div class="box box-primary">
                             <div class="box-header">
-                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
+                                 <h3 class="box-title"><i class="fa fa-picture-o"></i> List Galeri Foto</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
