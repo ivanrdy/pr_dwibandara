@@ -1,15 +1,19 @@
+<?php 
+    $nav = mysql_fetch_array(mysql_query("SELECT * FROM cms_nav"));
+    $sh = mysql_fetch_array(mysql_query("SELECT * FROM cms_subheading"));
+?>
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><i class="fa fa-calendar-o"></i> Pakej
-                <small>Kumpulan pakej wisata Bandung murah sangat.</small>
+            <h1 class="page-header"><i class="fa fa-calendar-o"></i> <?php echo $sh['head_paket'] ?>
+                <small><?php echo $sh['sub_paket'] ?></small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>
                 </li>
-                <li class="active">Pakej</li>
+                <li class="active"><?php echo $nav['paket'] ?></li>
             </ol>
         </div>
     </div>

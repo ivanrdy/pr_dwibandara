@@ -1,3 +1,6 @@
+<?php 
+    $nav = mysql_fetch_array(mysql_query("SELECT * FROM cms_nav"));
+?>
 <nav id="top" class="navbar navbar-inverse navbar-static-top" role="navigation" style="font-size:120%">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,27 +19,27 @@
                 <?php if($_GET['page']=='pakej'){ ?>
                 <li class='active'>
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="pakej"><i class="fa fa-list-ul"></i> Pakej</a>
+                    <a href="pakej"><i class="fa fa-list-ul"></i> <?php echo $nav['paket'] ?></a>
                 </li>
                 <?php if($_GET['page']=='lokasi'){ ?>
                 <li class='active' style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="lokasi"><i class="fa fa-globe"></i> Lokasi</a>
+                    <a href="lokasi"><i class="fa fa-globe"></i> <?php echo $nav['lokasi'] ?></a>
                 </li>
                 <?php if($_GET['page']=='galeri'){ ?>
                 <li class="active" style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="galeri"><i class="fa fa-picture-o"></i> Galeri</a>
+                    <a href="galeri"><i class="fa fa-picture-o"></i> <?php echo $nav['galeri'] ?></a>
                 </li>
                 <?php if($_GET['page']=='testi'){ ?>
                 <li class="active" style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="testi-1"><i class="fa fa-comment"></i> Testimoni</a>
+                    <a href="testi-1"><i class="fa fa-comment"></i> <?php echo $nav['testi'] ?></a>
                 </li>
                 <?php if($_GET['page']=='kontak'){ ?>
                 <li class='active' style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="kontak"><i class="fa fa-envelope-square"></i> Kontak</a>
+                    <a href="kontak"><i class="fa fa-envelope-square"></i> <?php echo $nav['kontak'] ?></a>
                 </li>
             </ul>
         </div>

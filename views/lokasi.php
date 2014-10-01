@@ -1,15 +1,19 @@
+<?php 
+    $nav = mysql_fetch_array(mysql_query("SELECT * FROM cms_nav"));
+    $sh = mysql_fetch_array(mysql_query("SELECT * FROM cms_subheading"));
+?>
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><i class="fa fa-globe"></i> Lokasi Wisata
-                <small>Subheading</small>
+            <h1 class="page-header"><i class="fa fa-globe"></i> <?php echo $sh['head_lokasi'] ?>
+                <small><?php echo $sh['sub_lokasi'] ?></small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>
                 </li>
-                <li class="active">Lokasi</li>
+                <li class="active"><?php echo $nav['lokasi'] ?></li>
             </ol>
         </div>
     </div>

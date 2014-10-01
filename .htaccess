@@ -11,6 +11,7 @@ RewriteRule ^testi-(.*)$ main.php?page=testi&hal=$1 [L]
 RewriteRule ^in$ main.php?page=login [L]
 
 RewriteRule ^mint$ mint.php?page=home [L]
+RewriteRule ^mint-cms$ mint.php?page=cms [L]
 RewriteRule ^mint-paket$ mint.php?page=paket [L]
 RewriteRule ^mint-edit-deskripsi$ mint.php?page=editdeskripsi [L]
 RewriteRule ^mint-lokasi-(.*)$ mint.php?page=lokasi&hal=$1 [L]

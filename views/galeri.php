@@ -1,14 +1,19 @@
+<?php 
+    $nav = mysql_fetch_array(mysql_query("SELECT * FROM cms_nav"));
+    $sh = mysql_fetch_array(mysql_query("SELECT * FROM cms_subheading"));
+?>
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header"><i class="fa fa-picture-o"></i> Galeri
+            <h1 class="page-header"><i class="fa fa-picture-o"></i> <?php echo $sh['head_galeri'] ?>
+            <small><?php echo $sh['sub_galeri'] ?></small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>
                 </li>
-                <li class="active">Galeri</li>
+                <li class="active"><?php $nav['galeri'] ?></li>
             </ol>
         </div>
     </div>

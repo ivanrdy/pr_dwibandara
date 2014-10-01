@@ -57,6 +57,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="mint-cms">
+                        <i class="fa fa-edit"></i> <span>CMS</span>
+                    </a>
+                </li>
+                <li>
                     <a href="mint-paket">
                         <i class="fa fa-picture-o"></i> <span>Paket</span>
                     </a>

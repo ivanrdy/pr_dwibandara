@@ -40,9 +40,11 @@
                     case 'readMsg'              :   include ("views/a_read.php");                                                       
                                                     break;         
                     case 'paket'                :   include ("views/a_paket.php");                                                                              
-                                                     break;                                                      
+                                                    break;                                                      
             	    case 'editpaket'            :   include ("views/a_edit_paket.php");
-                                                     break;
+                                                    break;
+                    case 'cms'                  :   include("views/a_cms.php");
+                                                    break;
                 }	
 
             include("views/a_footer.php");

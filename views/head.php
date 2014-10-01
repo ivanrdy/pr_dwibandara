@@ -22,7 +22,7 @@
 	    jQuery(function($){
 	        $('#map_canvas').gmap3({
 	            marker:{
-	                address: '-6.904341, 107.576594' 
+	                address: '-6.904446, 107.580455' 
 	            },
 	                map:{
 	                options:{
