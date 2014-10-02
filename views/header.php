@@ -24,12 +24,12 @@
                 <?php if($_GET['page']=='lokasi'){ ?>
                 <li class='active' style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="lokasi"><i class="fa fa-globe"></i> <?php echo $nav['lokasi'] ?></a>
+                    <a href="lokasi-1"><i class="fa fa-globe"></i> <?php echo $nav['lokasi'] ?></a>
                 </li>
                 <?php if($_GET['page']=='galeri'){ ?>
                 <li class="active" style="color:#FFF">
                 <?php }else{ echo "<li>"; } ?>
-                    <a href="galeri"><i class="fa fa-picture-o"></i> <?php echo $nav['galeri'] ?></a>
+                    <a href="galeri-1"><i class="fa fa-picture-o"></i> <?php echo $nav['galeri'] ?></a>
                 </li>
                 <?php if($_GET['page']=='testi'){ ?>
                 <li class="active" style="color:#FFF">

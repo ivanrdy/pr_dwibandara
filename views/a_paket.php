@@ -47,7 +47,12 @@
                                      <div class="form-group">
                                         <label for="nama">Fasilitas</label><p class="help-block">Pisahkan tiap fasilitas dengan garis baru (Enter).</p>
                                         <textarea name="fasilitas" id="fasilitas" class="form-control" style="max-width:100%;max-height:200px" placeholder="Fasilitas. Pisahkan dengan menekan Enter." cols="30" rows="10"></textarea>
-                                    </div>                                  
+                                    </div>   
+                                    <div class="form-group">
+                                        <label for="star">Favorit ?</label><br>
+                                        <input type="radio" name="starred" value="Yes"> Ya
+                                        <input type="radio" name="starred" value="No" checked> Tidak
+                                    </div>                               
                                 </div><!-- /.box-body -->
                                 <div class="box-footer">
                                     <button type="submit" class="btn btn-primary"><i class='fa fa-check'></i> Simpan</button>

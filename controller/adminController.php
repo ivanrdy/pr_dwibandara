@@ -473,10 +473,12 @@
                 $durasi               = $_POST['durasi'];
                 $ongkos_bandung       = $_POST['ongkos_bandung'];
                 $ongkos_jakarta       = $_POST['ongkos_jakarta'];
+                $star  				  = $_POST['starred'];
+                $fas				  = $_POST['fasilitas'];
                 $status               = "Aktif";
 
-                $query = mysql_query("INSERT INTO paket(paket,durasi,ongkos_bandung,ongkos_jakarta,status)
-                             VALUES('$paket','$durasi','$ongkos_bandung','$ongkos_jakarta','$status')"); 
+                $query = mysql_query("INSERT INTO paket(paket,durasi,ongkos_bandung,ongkos_jakarta,status,starred,fasilitas)
+                             VALUES('$paket','$durasi','$ongkos_bandung','$ongkos_jakarta','$status','$star','$fas')"); 
 
                 if($query){ 
                 	echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -498,12 +500,14 @@
                 $durasi           = $_POST['durasi'];
                 $ongkos_bandung   = $_POST['ongkos_bandung'];
                 $ongkos_jakarta   = $_POST['ongkos_jakarta'];
+                $fas			  = $_POST['fasilitas'];
+                $star  			  = $_POST['starred'];
 
-                $query = mysql_query("UPDATE paket SET paket='$paket', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
+                $query = mysql_query("UPDATE paket SET fasilitas='$fas', starred='$starred', paket='$paket', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
                 if($query){ 
                     echo ("<SCRIPT LANGUAGE='JavaScript'>
                           window.alert('Paket berhasil diperbarui.')
-                          window.location.href='mint-edit-paket-1'
+                          window.location.href='mint-paket-1'
                           </SCRIPT>");
                 }else{
                     echo ("<SCRIPT LANGUAGE='JavaScript'>

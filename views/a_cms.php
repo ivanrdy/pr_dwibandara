@@ -82,6 +82,54 @@
                     </div>
 
                     <div class="box box-primary">
+                        <div class="box-header">
+                            <h3 class="box-title"><i class="fa fa-info"></i> Tri-Poin
+                                <small>3 Pilihan paket wisata halaman awal</small></h3>
+                                <div class="box-tools pull-right">
+                                <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
+                                </div>
+                        </div>
+                        <form role="form" action="ubahtriitem" method="post">
+                        <div class="box-body">
+                        <table class='table'>
+                        <?php
+
+                        $q = mysql_fetch_array(mysql_query("SELECT * FROM cms_triitem"));
+
+                        ?>
+                            <tr>
+                                <td>
+                                    <div class="form-group">
+                                        <label for="telepon"><i class='fa fa-tree'></i> 1</label>
+                                        <input type="text" name="tree" class="form-control" value='<?php echo $q['tree']; ?>'>
+                                        <input type="text" name="treesub" class="form-control" value='<?php echo $q['tree_sub']; ?>'>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label for="telepon2"><i class='fa fa-car'></i> 2</label>
+                                        <input type="text" name="car" class="form-control" value='<?php echo $q['car']; ?>'>
+                                        <input type="text" name="carsub" class="form-control" value='<?php echo $q['car_sub']; ?>'>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="form-group">
+                                        <label for="galeri"><i class='fa fa-support'></i> 3</label>
+                                        <input type="text" name="lg" class="form-control" value='<?php echo $q['lifeguard']; ?>'>
+                                        <input type="text" name="lgsub" class="form-control" value='<?php echo $q['lifeguard_sub']; ?>'>
+                                    </div>                                     
+                                </td>  
+                            </tr>
+                        </table>
+                        </div>
+                        <div class="box-footer">
+                            <button type="submit" class="btn btn-primary"><i class='fa fa-check'></i> Simpan</button>
+                            <button type="reset" class="btn btn-warning">Ulangi</button>
+                        </div>
+                        </form>
+                    </div>
+
+                    <div class="box box-primary">
                          <?php 
                          $q = mysql_fetch_array(mysql_query("SELECT * FROM cms_subheading"));
                          ?>

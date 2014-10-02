@@ -5,8 +5,8 @@ RewriteEngine On
 RewriteRule ^beranda$ main.php?page=home [L]
 RewriteRule ^pakej$ main.php?page=pakej [L]
 RewriteRule ^kontak$ main.php?page=kontak [L]
-RewriteRule ^lokasi$ main.php?page=lokasi [L]
-RewriteRule ^galeri$ main.php?page=galeri [L]
+RewriteRule ^lokasi-(.*)$ main.php?page=lokasi&hal=$1 [L]
+RewriteRule ^galeri-(.*)$ main.php?page=galeri&hal=$1 [L]
 RewriteRule ^testi-(.*)$ main.php?page=testi&hal=$1 [L]
 RewriteRule ^in$ main.php?page=login [L]
 
