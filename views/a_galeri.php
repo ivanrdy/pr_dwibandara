@@ -16,7 +16,7 @@
                 <section class="content">
                     <div class="row">
                     <div class="col-sm-12">
-                    <div class='col-md-4'>
+                    <div class='col-sm-4'>
                         <div class="box box-primary">
                             <div class="box-header">
                                 <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah Foto Galeri</h3>
@@ -48,11 +48,11 @@
                             </form>
                         </div><!-- /.box -->
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-sm-8">
                         <!-- Primary box -->
                         <div class="box box-primary">
                             <div class="box-header">
-                                 <h3 class="box-title"><i class="fa fa-picture-o"></i>List Galeri Foto</h3>
+                                 <h3 class="box-title"><i class="fa fa-picture-o"></i> List Galeri Foto</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
