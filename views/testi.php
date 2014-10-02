@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-sm-12">
             <h1 class="page-header"><i class="fa fa-globe"></i> Testimoni Pelanggan
-                <small>Subheading</small>
+                <small>Silahkan Beri Pendapat Anda Tentang DwiBandara Tours And Travel</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>

@@ -231,13 +231,25 @@
 
 			 case "deleteUser":
 					$id = $_GET['id'];
-					$del = mysql_fetch_array(mysql_query("SELECT * FROM user WHERE id=$id"));
-							  
-					mysql_query("DELETE FROM user WHERE id=$id");
-						echo ("<SCRIPT LANGUAGE='JavaScript'>
+
+					$hitung = mysql_num_rows(mysql_query("SELECT id from user"));
+					if($hitung <= 1){
+							echo ("<SCRIPT LANGUAGE='JavaScript'>
+								  window.alert('User tidak bisa dihapus! Harus ada minimal 1 user')
+								  window.location.href='$_SERVER[HTTP_REFERER]'
+								  </SCRIPT>");
+
+
+					}
+					else{
+							mysql_query("DELETE FROM user WHERE id=$id");
+							
+							echo ("<SCRIPT LANGUAGE='JavaScript'>
 								  window.alert('User dihapus.')
 								  window.location.href='$_SERVER[HTTP_REFERER]'
 								  </SCRIPT>");
+					}
+						
 
 					break;
 

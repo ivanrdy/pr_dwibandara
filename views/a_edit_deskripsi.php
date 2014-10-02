@@ -85,7 +85,7 @@
                                         <tr>
                                             <div class="form-group">
                                                 <label for="deskripsi"><i class='fa fa-check'></i> Layanan DwiBandara</label>
-                                                <textarea name='layanan' class='form-control full-width' placeholder="Deskripsi DwiBandara"><?php echo $q['layanan']; ?></textarea>
+                                                <textarea name='layanan' class='form-control full-width' placeholder="Layanan DwiBandara"><?php echo $q['layanan']; ?></textarea>
                                             </div>                                        
                                         </tr>
                                         <tr>
@@ -97,7 +97,7 @@
                                         <tr>
                                             <div class="form-group">
                                                 <label for="layanan"><i class='fa fa-wrench'></i> Tentang DwiBandara</label>
-                                                <textarea name='tentang_kami' class='form-control full-width' placeholder="Layanan DwiBandara"><?php echo $q['tentang_kami']; ?></textarea>
+                                                <textarea name='tentang_kami' class='form-control full-width' placeholder="Tentang DwiBandara"><?php echo $q['tentang_kami']; ?></textarea>
                                             </div>
                                         </tr>
                                     </table>

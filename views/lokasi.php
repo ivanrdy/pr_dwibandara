@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header"><i class="fa fa-globe"></i> Lokasi Wisata
-                <small>Subheading</small>
+                <small>Tempat-tempat wisata dan lokasi terkenal di Bandung</small>
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>

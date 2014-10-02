@@ -29,7 +29,7 @@
 
                         <div class="box box-primary">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Tambah User</h3>
+                                <h3 class="box-title"><i class="fa fa-plus-square-o"></i> Ubah User</h3>
                                 <div class="box-tools pull-right">
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
@@ -85,7 +85,7 @@
                                            $posisi = $p->cariPosisi($batas);
                                             $a      = mysql_query("SELECT * FROM user ORDER BY username ASC LIMIT $posisi, $batas");
                                             if(mysql_num_rows($a)==0){
-                                                echo"<tr><td>Lokasi tidak ditemukan.</td></tr></tbody></table>";
+                                                echo"<tr><td>User tidak ditemukan.</td></tr></tbody></table>";
                                             }else{
                                             while($b=mysql_fetch_array($a)){
                                             echo"
