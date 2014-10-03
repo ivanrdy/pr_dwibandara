@@ -7,13 +7,10 @@
     <!-- Page Heading/Breadcrumbs -->
     <div class="row">
         <div class="col-lg-12">
-<<<<<<< HEAD
-            <h1 class="page-header"><i class="fa fa-globe"></i> Lokasi Wisata
-                <small>Tempat-tempat wisata dan lokasi terkenal di Bandung</small>
-=======
+
             <h1 class="page-header"><i class="fa fa-globe"></i> <?php echo $sh['head_lokasi'] ?>
                 <small><?php echo $sh['sub_lokasi'] ?></small>
->>>>>>> 55f30f8689c7669ff7964c1934c244be346c0fde
+
             </h1>
             <ol class="breadcrumb">
                 <li><a href="beranda"><i class="fa fa-home"></i> Beranda</a>

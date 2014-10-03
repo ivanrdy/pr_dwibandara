@@ -98,7 +98,7 @@
 						$ukuran = $_FILES['gambar']['size'];
 						move_uploaded_file($lokasi_file,$dir.$gambar);
 						$query = mysql_query("INSERT INTO lokasi(id,nama,deskripsi,gambar,status)
-													 VALUES('','$nama','$detail','$gambar','$tgl','$status')"); 
+													 VALUES('','$nama','$deskripsi','$gambar')"); 
 						} else {
 							foreach($errors as $error) {
 							   echo '<script>alert("'.$error.'");</script>';
@@ -224,7 +224,6 @@
 				}
 				break;
 
-<<<<<<< HEAD
 			 case "deleteUser":
 					$id = $_GET['id'];
 
@@ -250,8 +249,7 @@
 					break;
 
 
-			case "ubahKontak":
-=======
+
 		case "deleteUser":
 				$id = $_GET['id'];
 				$del = mysql_fetch_array(mysql_query("SELECT * FROM user WHERE id=$id"));
@@ -262,7 +260,7 @@
 							  window.location.href='$_SERVER[HTTP_REFERER]'
 							  </SCRIPT>");
 				break;
->>>>>>> 55f30f8689c7669ff7964c1934c244be346c0fde
+
 
 		case "ubahKontak":
 
