@@ -106,19 +106,19 @@
 							}
 						}   
 
-					}
+				}
 						
-					if($query){ 
-						echo ("<SCRIPT LANGUAGE='JavaScript'>
-								  window.alert('Lokasi $nama berhasil diperbarui.')
-								  window.location.href='mint-edit-lokasi-1'
-								  </SCRIPT>");
-					}else{
-						echo ("<SCRIPT LANGUAGE='JavaScript'>
-								  window.alert('Terjadi kesalahan pada perbaruan produk, silakan ulangi.')
-								  window.location.href='$_SERVER[HTTP_REFERER]'
-								  </SCRIPT>");
-					}
+				if($query){ 
+					echo ("<SCRIPT LANGUAGE='JavaScript'>
+							  window.alert('Lokasi $nama berhasil diperbarui.')
+							  window.location.href='mint-edit-lokasi-1'
+							  </SCRIPT>");
+				}else{
+					echo ("<SCRIPT LANGUAGE='JavaScript'>
+							  window.alert('Terjadi kesalahan pada perbaruan produk, silakan ulangi.')
+							  window.location.href='$_SERVER[HTTP_REFERER]'
+							  </SCRIPT>");
+				}
 				
 				break;
 				
@@ -376,7 +376,7 @@
 	                
 	        	if(empty($foto)){
 
-	            	$query = mysql_query("UPDATE galeri SET nama='$nama', deskripsi='$deskripsi' WHERE id=$id");
+	            	$query = mysql_query("UPDATE galeri SET nama_foto='$nama_foto', deskripsi='$deskripsi' WHERE id=$id");
 
 	            }else{
 

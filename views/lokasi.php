@@ -35,8 +35,10 @@
                 }else{
                 while($b=mysql_fetch_array($a)){
             ?>
-            <div class="col-sm-6 img-portfolio">
+            <div class="col-sm-6">
+                <div class="img-portfolio">
                     <img class="img-responsive" src="assets/img/lokasi/<?php echo $b['gambar'] ?>" alt="">
+                </div>                    
                 <h3>
                     <a><?php echo $b['nama'] ?></a>
                 </h3>

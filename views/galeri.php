@@ -34,8 +34,10 @@
                 }else{
                 while($r=mysql_fetch_array($a)){
             ?>
-            <div class="col-sm-3 img-portfolio">
-                <img title data-toggle='tooltip' data-original-title='<?php echo $r['nama_foto'] ?>' class="img-responsive img-rounded" src="assets/img/galeri/<?php echo $r['foto'] ?>" alt="<?php echo $r['deskripsi'] ?> ">
+            <div class="col-sm-3">
+                <div class="img-portfolio">
+                    <img title data-toggle='tooltip' data-original-title='<?php echo $r['nama_foto'] ?>' class="thumb img-hover img-rounded" src="assets/img/galeri/<?php echo $r['foto'] ?>" alt="<?php echo $r['deskripsi'] ?> ">
+                </div>                
             </div>
             <?php }
                 $jmldata    =   mysql_num_rows(mysql_query("SELECT * FROM galeri WHERE status='Aktif' "));

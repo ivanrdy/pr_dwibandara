@@ -32,7 +32,7 @@
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="ubahGaleri" enctype="multipart/form-data" method="post">
+                            <form role="form" action="ubahGaleri-<?php echo $id ?>" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Nama Foto</label>
@@ -45,7 +45,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>
-                                    <input type="file" id="foto" name="foto" accept='image/*' required>
+                                    <input type="file" id="foto" name="foto" accept='image/*'>
                                     <p class="help-block">Masukkan file gambar.</p>
                                 </div>
                             </div><!-- /.box-body -->

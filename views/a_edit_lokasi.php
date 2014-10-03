@@ -32,7 +32,7 @@
                                     <button class="btn btn-primary btn-xs" data-widget="collapse"><i class="fa fa-minus"></i></button>                                        
                                 </div>
                             </div>
-                            <form role="form" action="ubahLokasi-$id" enctype="multipart/form-data" method="post">
+                            <form role="form" action="ubahLokasi-<?php echo $id ?>" enctype="multipart/form-data" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="nama">Nama Lokasi</label>

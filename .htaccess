@@ -38,7 +38,7 @@ RewriteRule ^hapususer-(.*)$ controller/adminController.php?process=deleteUser&i
 RewriteRule ^ubahkontak$ controller/adminController.php?process=ubahKontak [L]
 RewriteRule ^ubahdeskripsi$ controller/adminController.php?process=ubahDeskripsi [L]
 RewriteRule ^tambahGaleri$ controller/adminController.php?process=tambahGaleri [L]
-RewriteRule ^ubahGaleri$ controller/adminController.php?process=ubahGaleri [L]
+RewriteRule ^ubahGaleri-(.*)$ controller/adminController.php?process=ubahGaleri&id=$1 [L]
 RewriteRule ^hapusgaleri-(.*)$ controller/adminController.php?process=deleteGaleri&id=$1 [L]
 RewriteRule ^ubahstatusgaleri-(.*)$ controller/adminController.php?process=changeStatGaleri&id=$1 [L]
 RewriteRule ^addTesti$ controller/indexController.php?process=addtesti [L]

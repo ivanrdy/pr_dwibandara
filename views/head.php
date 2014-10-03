@@ -16,7 +16,19 @@
 
 	<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
 	<script src="assets/js/jquery.gmap3.min.js"></script>   
-	    
+	<script src="assets/js/jquery.imagefit.js"></script> 
+	<script type='text/javascript'>
+	        $('.img-portfolio').imagefit({
+	            mode: 'outside',
+	            force : 'true',
+	            halign : 'center',
+	            valign : 'middle'
+	        });
+
+	        $(window).load(function() {
+	            $('.img-portfolio').imagefit();
+	        });        
+	</script>  
 	<!-- Google Map Init-->
 	<script type="text/javascript">
 	    jQuery(function($){
