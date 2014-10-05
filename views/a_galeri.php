@@ -37,7 +37,7 @@
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>
                                     <input type="file" id="foto" name="foto" accept='image/*' required>
-                                    <p class="help-block">Masukkan file gambar.</p>
+                                    <p class="help-block">Masukkan file gambar. Ukuran file gambar tidak boleh lebih dari 2 MB</p>
                                 </div>
                             </div><!-- /.box-body -->
                             <div class="box-footer">
