@@ -40,8 +40,8 @@
                                     <input value="<?php echo $fetch['nama']; ?>" type="text" name="nama" class="form-control" id="exampleInputEmail1" placeholder="Nama Lokasi">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Deskripsi</label>
-                                    <textarea name='deskripsi' class='form-control full-width' placeholder="Deskripsi Lokasi Wisata"><?php echo $fetch['deskripsi']; ?></textarea>
+                                    <label for="exampleInputPassword1">Deskripsi (Maksimal 400 Karakter)</label>
+                                    <textarea name='deskripsi' class='form-control full-width' maxlength="400" placeholder="Deskripsi Lokasi Wisata"><?php echo $fetch['deskripsi']; ?></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="gambar">Foto</label>
