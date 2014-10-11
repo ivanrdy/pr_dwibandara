@@ -111,7 +111,7 @@
 				if($query){ 
 					echo ("<SCRIPT LANGUAGE='JavaScript'>
 							  window.alert('Lokasi $nama berhasil diperbarui.')
-							  window.location.href='mint-edit-lokasi-1'
+							  window.location.href='mint-lokasi-1'
 							  </SCRIPT>");
 				}else{
 					echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -530,11 +530,11 @@
                 $fas			  = $_POST['fasilitas'];
                 $star  			  = $_POST['starred'];
 
-                $query = mysql_query("UPDATE paket SET fasilitas='$fas', starred='$starred', paket='$paket', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
+                $query = mysql_query("UPDATE paket SET fasilitas='$fas', starred='$star', paket='$paket', durasi='$durasi', ongkos_bandung='$ongkos_bandung', ongkos_jakarta='$ongkos_jakarta' WHERE id=$id");
                 if($query){ 
                     echo ("<SCRIPT LANGUAGE='JavaScript'>
                           window.alert('Paket berhasil diperbarui.')
-                          window.location.href='mint-paket-1'
+                          window.location.href='mint-paket'
                           </SCRIPT>");
                 }else{
                     echo ("<SCRIPT LANGUAGE='JavaScript'>
